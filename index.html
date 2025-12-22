@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honolulu Family Trip May 2026</title>
+    <style>
+        :root {
+            --color-white: rgba(255, 255, 255, 1);
+            --color-black: rgba(0, 0, 0, 1);
+            --color-cream-50: rgba(252, 252, 249, 1);
+            --color-cream-100: rgba(255, 255, 253, 1);
+            --color-teal-500: rgba(33, 128, 141, 1);
+            --color-teal-600: rgba(29, 116, 128, 1);
+            --color-slate-900: rgba(19, 52, 59, 1);
+            --color-slate-500: rgba(98, 108, 113, 1);
+            --color-orange-500: rgba(168, 75, 47, 1);
+            --color-error: #C0152F;
+            --color-success: #218D8D;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 16px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--color-slate-900);
+            background-color: var(--color-cream-50);
+        }
+
+        body {
+            line-height: 1.5;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #FF6B6B 0%, var(--color-teal-500) 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+
+        .trip-dates {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background: var(--color-white);
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            flex-wrap: wrap;
+            z-index: 100;
+        }
+
+        nav button {
+            padding: 10px 20px;
+            border: 2px solid var(--color-teal-500);
+            background: var(--color-white);
+            color: var(--color-teal-500);
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        nav button:hover,
+        nav button.active {
+            background: var(--color-teal-500);
+            color: white;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Main content sections */
+        .content-section {
+            display: none;
+            padding: 40px 0;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        /* Itinerary day cards */
+        .day-card {
+            background: white;
+            border-left: 5px solid var(--color-teal-500);
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .day-card h3 {
+            color: var(--color-teal-600);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .day-card p {
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .activity {
+            background: var(--color-cream-100);
+            padding: 15px;
+            margin-bottom: 12px;
+            border-radius: 6px;
+            border-left: 4px solid var(--color-orange-500);
+        }
+
+        .activity-time {
+            font-weight: 600;
+            color: var(--color-orange-500);
+            font-size: 0.95rem;
+        }
+
+        /* Restaurant cards */
+        .restaurant-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .restaurant-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .restaurant-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+
+        .restaurant-header {
+            background: linear-gradient(135deg, var(--color-teal-500), var(--color-teal-600));
+            color: white;
+            padding: 20px;
+        }
+
+        .restaurant-header h3 {
+            margin-bottom: 8px;
+            font-size: 1.3rem;
+        }
+
+        .trending-badge {
+            display: inline-block;
+            background: #FFD700;
+            color: black;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 8px;
+        }
+
+        .tiktok-badge {
+            display: inline-block;
+            background: #000;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+
+        .restaurant-body {
+            padding: 20px;
+        }
+
+        .restaurant-body p {
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+
+        .cuisine-type {
+            color: var(--color-slate-500);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .address {
+            color: var(--color-slate-500);
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+        }
+
+        .visit-link {
+            display: inline-block;
+            background: var(--color-teal-500);
+            color: white;
+            padding: 10px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+
+        .visit-link:hover {
+            background: var(--color-teal-600);
+        }
+
+        /* Beach cards */
+        .beach-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .beach-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .beach-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .beach-emoji {
+            font-size: 3rem;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, rgba(255, 107, 107, 0.1), rgba(33, 128, 141, 0.1));
+        }
+
+        .beach-info {
+            padding: 20px;
+        }
+
+        .beach-info h4 {
+            color: var(--color-teal-600);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .beach-info p {
+            color: var(--color-slate-500);
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+        }
+
+        .toddler-icon {
+            color: #FF6B6B;
+            font-weight: 600;
+        }
+
+        /* Logistics */
+        .logistics-box {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            border-left: 5px solid var(--color-success);
+        }
+
+        .logistics-box h4 {
+            color: var(--color-success);
+            margin-bottom: 15px;
+            font-size: 1.15rem;
+        }
+
+        .logistics-item {
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .logistics-item:last-child {
+            border-bottom: none;
+        }
+
+        .logistics-label {
+            font-weight: 600;
+            color: var(--color-slate-900);
+        }
+
+        .logistics-value {
+            color: var(--color-slate-500);
+            font-size: 0.95rem;
+        }
+
+        /* Info boxes */
+        .info-box {
+            background: rgba(33, 128, 141, 0.08);
+            border-left: 4px solid var(--color-teal-500);
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 25px;
+        }
+
+        .info-box h4 {
+            color: var(--color-teal-600);
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--color-slate-900);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin-bottom: 8px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            nav {
+                gap: 10px;
+            }
+
+            nav button {
+                padding: 8px 14px;
+                font-size: 0.9rem;
+            }
+
+            .restaurant-grid,
+            .beach-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🌺 Honolulu Family Adventure 2026 🌺</h1>
+        <p class="trip-dates">May 10-17, 2026 | Grand Waikikian Resort</p>
+    </header>
+
+    <nav>
+        <button class="nav-btn active" data-section="itinerary">📅 Itinerary</button>
+        <button class="nav-btn" data-section="restaurants">🍽️ Trending Spots</button>
+        <button class="nav-btn" data-section="beaches">🏖️ Best Beaches</button>
+        <button class="nav-btn" data-section="logistics">✈️ Logistics</button>
+    </nav>
+
+    <div class="container">
+        <!-- ITINERARY SECTION -->
+        <section id="itinerary" class="content-section active">
+            <h2 style="color: var(--color-teal-600); margin-bottom: 30px; font-size: 2rem;">Your Daily Adventure Plan</h2>
+
+            <div class="day-card">
+                <h3>Sunday, May 10 - Arrival Day</h3>
+                <div class="activity">
+                    <span class="activity-time">🛬 8:50 PM</span> - Land at Honolulu International Airport
+                </div>
+                <div class="activity">
+                    <span class="activity-time">🏨 9:30 PM</span> - Check-in at Grand Waikikian (2BR Suite)
+                </div>
+                <div class="activity">
+                    <span class="activity-time">🛒 10:00 PM</span> - Grab snacks at ABC Store nearby
+                </div>
+                <p><strong>Tip:</strong> Get rest before the adventure starts! Your room has a full kitchen.</p>
+            </div>
+
+            <div class="day-card">
+                <h3>Monday, May 11 - Beach & Costco Day</h3>
+                <div class="activity">
+                    <span class="activity-time">🌅 9:00 AM</span> - Breakfast at your suite
+                </div>
+                <div class="activity">
+                    <span class="activity-time">🏊 10:30 AM</span> - Duke Kahanamoku Beach &amp; Lagoon (right at resort - ZERO waves, perfect for 16mo!)
+                </div>
+                <div class="activity">
+                    <span class="activity-time">🚗 1:00 PM</span> - Pick up your Turo Jeep Wrangler at 1810 Kapiolani Blvd
+                </div>
+                <div class="activity">
+                    <span class="activity-time">🛒 2:00 PM</span> - Costco Iwilei (3.5 miles) - Stock kitchen with snacks &amp; local fruits
+                </div>
+                <div class="activity">
+                    <span class="activity-time">🍕 6:00 PM</span> - Dinner: <strong>Mad Pie</strong> (Trending pizza in Kaka'ako) or <strong>Chao Hawai'i</strong> (Viral Vietnamese)
+                </div>
+                <p><span class="toddler-icon">👶 Toddler Note:</span> Pack snacks, sunscreen, and plenty of water bottles!</p>
+            </div>
+
+            <div class="day-card">
+                <h3>Tuesday, May 12 - North Shore Expedition 🌊</h3>
+                <div class="activity">
+                    <span class="activity-time">🌅 8:00 AM</span> - Quick breakfast &amp; hit the road (1 hour drive)
+                </div>
+                <div class="activity">
+                    <span class="activity-time">🐢 9:30 AM</span> - <strong>Laniakea Beach</strong> - Sea turtle spotting! (Safe distance for photos)
+                </div>
+                <div class="activity">
+                    <span class="activity-time">🍤 12:30 PM</span> - <strong>Giovanni's Shrimp Truck</strong> (The ORIGINAL, not a knockoff!) - Request plain scoop for toddler
+                </div>
+                <div class="activity">
+                    <span class="activity-time">🥾 2:00 PM</span> - <strong>Waimea Valley</strong> - Paved stroller-friendly waterfall walk
+                </div>
+                <div class="activity">
+                    <span class="activity-time">🍧 4:00 PM</span> - <strong>Matsumoto Shave Ice</strong> - The legendary spot since 1951
+                </div>
+                <div class="activity">
+                    <span class="activity-time">🏨 6:00 PM</span> - Drive back to resort, early dinner
+                </div>
+            </div>
+
+            <div class="day-card">
+                <h3>Wednesday, May 13 - East Side Calm Waters</h3>
+                <div class="activity">
+                    <span class="activity-time">🌅 8:30 AM</span> - Breakfast &amp; prepare for beach day
+                </div>
+                <div class="activity">
+                    <span class="activity-time">🏖️ 10:00 AM</span> - <strong>Lanikai Beach</strong> - Softest sand, calmest water. PERFECT for toddlers
+                </div>
+                <div class="activity">
+                    <span class="activity-time">🍱 12:30 PM</span> - Lunch: <strong>Off the Hook Poke Market</strong> (Viral "Cold Ginger" poke)
+                </div>
+                <div class="activity">
+                    <span class="activity-time">🛍️ 2:00 PM</span> - <strong>Ala Moana Center</strong> - Open-air shopping, stroller-friendly
+                </div>
+                <div class="activity">
+                    <span class="activity-time">🍜 6:00 PM</span> - Dinner: <strong>Neko Koneko Cafe</strong> (Cozy TikTok favorite)
+                </div>
+            </div>
+
+            <div class="day-card">
+                <h3>Thursday, May 14 - Ko Olina Lagoons &amp; Car Return</h3>
+                <div class="activity">
+                    <span class="activity-time">🌅 8:30 AM</span> - Breakfast &amp; pack for beach
+                </div>
+                <div class="activity">
+                    <span class="activity-time">🏊 9:30 AM</span> - <strong>Ko Olina Lagoon 4</strong> - Man-made lagoons = NO WAVES (Like giant pools!)
+                </div>
+                <div class="activity">
+                    <span class="activity-time">1:00 PM</span> - Return Turo Jeep at 1810 Kapiolani Blvd (Leave key on tire)
+                </div>
+                <div class="activity">
+                    <span class="activity-time">🍙 6:00 PM</span> - Dinner: <strong>Musubi Cafe Iyasume</strong> - Gold standard spam musubi
+                </div>
+                <p><span class="toddler-icon">👶 Pro Tip:</span> Musubi is perfect finger food for little ones!</p>
+            </div>
+
+            <div class="day-card">
+                <h3>Friday, May 15 - Resort Relaxation &amp; Fireworks</h3>
+                <div class="activity">
+                    <span class="activity-time">🌅 9:00 AM</span> - Sleep in! Resort breakfast
+                </div>
+                <div class="activity">
+                    <span class="activity-time">🛍️ 10:30 AM</span> - <strong>Waikiki Beach Walk</strong> - Boutique shopping &amp; lunch
+                </div>
+                <div class="activity">
+                    <span class="activity-time">😴 2:00 PM</span> - Nap time at resort
+                </div>
+                <div class="activity">
+                    <span class="activity-time">🏊 4:00 PM</span> - Hilton pools &amp; beach time
+                </div>
+                <div class="activity">
+                    <span class="activity-time">🎆 7:45 PM</span> - <strong>Friday Night Fireworks</strong> at Hilton Hawaiian Village (visible from your resort!)
+                </div>
+            </div>
+
+            <div class="day-card">
+                <h3>Saturday, May 16 - Farmers Market &amp; Final Dining</h3>
+                <div class="activity">
+                    <span class="activity-time">🌅 8:00 AM</span> - <strong>KCC Farmers Market</strong> (Saturday mornings) - Fresh local fruits &amp; grilled items
+                </div>
+                <div class="activity">
+                    <span class="activity-time">🍣 12:30 PM</span> - Lunch: <strong>Maguro Brothers</strong> (Freshest trending poke in Waikiki)
+                </div>
+                <div class="activity">
+                    <span class="activity-time">🛍️ 2:00 PM</span> - Last-minute shopping &amp; beach time
+                </div>
+                <div class="activity">
+                    <span class="activity-time">🍽️ 6:30 PM</span> - Fancy dinner: <strong>La Mer</strong> (Michelin-level French with ocean views at Halekulani) OR <strong>Hoku's</strong> (Hawaiian-fusion with stunning Kahala views)
+                </div>
+            </div>
+
+            <div class="day-card">
+                <h3>Sunday, May 17 - Departure</h3>
+                <div class="activity">
+                    <span class="activity-time">🌅 8:00 AM</span> - Final beach session at Ala Moana (locals' favorite, calm waters)
+                </div>
+                <div class="activity">
+                    <span class="activity-time">🛍️ 11:00 AM</span> - Last souvenir shopping at International Market Place
+                </div>
+                <div class="activity">
+                    <span class="activity-time">🏨 2:00 PM</span> - Check out of Grand Waikikian
+                </div>
+                <div class="activity">
+                    <span class="activity-time">✈️ 10:05 PM</span> - Depart HNL for Vancouver (AC 518)
+                </div>
+            </div>
+        </section>
+
+        <!-- TRENDING RESTAURANTS SECTION -->
+        <section id="restaurants" class="content-section">
+            <h2 style="color: var(--color-teal-600); margin-bottom: 30px; font-size: 2rem;">🎬 TikTok &amp; Viral Trending Spots</h2>
+
+            <h3 style="color: var(--color-teal-600); margin-top: 30px; margin-bottom: 20px;">Must-Try Iconic Eats</h3>
+            <div class="restaurant-grid">
+                <div class="restaurant-card">
+                    <div class="restaurant-header">
+                        <h3>🍤 Giovanni's Shrimp Truck</h3>
+                        <span class="trending-badge">ICONIC</span>
+                    </div>
+                    <div class="restaurant-body">
+                        <p class="cuisine-type">Garlic Shrimp Plate</p>
+                        <p class="address">📍 66-246 Kamehameha Hwy, Haleiwa, HI 96712</p>
+                        <p>The ORIGINAL shrimp truck on North Shore (since 1988). Don't eat in car—cockroaches. Garlic butter is legendary. Request plain rice for toddler.</p>
+                        <a href="https://maps.app.goo.gl/EQjqY3HvGbM7JX9i8" class="visit-link" target="_blank">📍 View on Maps</a>
+                    </div>
+                </div>
+
+                <div class="restaurant-card">
+                    <div class="restaurant-header">
+                        <h3>🍙 Musubi Cafe Iyasume</h3>
+                        <span class="trending-badge">VIRAL</span>
+                    </div>
+                    <div class="restaurant-body">
+                        <p class="cuisine-type">Premium Spam Musubi</p>
+                        <p class="address">📍 Multiple Waikiki locations</p>
+                        <p>Gold standard musubi with creative toppings (avocado, bacon, teriyaki). Easy finger food for 16mo. Perfect quick lunch.</p>
+                        <a href="https://maps.app.goo.gl/vXhM9jNHJb2pKqX6A" class="visit-link" target="_blank">📍 View on Maps</a>
+                    </div>
+                </div>
+
+                <div class="restaurant-card">
+                    <div class="restaurant-header">
+                        <h3>🍕 Mad Pie</h3>
+                        <span class="trending-badge">2025 TOP</span>
+                        <span class="tiktok-badge">VIRAL</span>
+                    </div>
+                    <div class="restaurant-body">
+                        <p class="cuisine-type">East Coast-Style Pizza</p>
+                        <p class="address">📍 516 Keawe St, Kaka'ako, HI 96814</p>
+                        <p>Most talked-about new pizza spot. Sourdough crust, fresh ingredients. Go EARLY—sells out! Cannolis are incredible too.</p>
+                        <a href="https://madpiepizza.com" class="visit-link" target="_blank">🔗 Visit Website</a>
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="color: var(--color-teal-600); margin-top: 30px; margin-bottom: 20px;">Poke &amp; Fresh Seafood (TikTok Favorites)</h3>
+            <div class="restaurant-grid">
+                <div class="restaurant-card">
+                    <div class="restaurant-header">
+                        <h3>🐟 Off the Hook Poke Market</h3>
+                        <span class="tiktok-badge">TRENDING</span>
+                    </div>
+                    <div class="restaurant-body">
+                        <p class="cuisine-type">Premium Fresh Poke</p>
+                        <p class="address">📍 Multiple locations | Manoa area</p>
+                        <p>Viral for their unique "Cold Ginger" poke. Incredibly fresh. Perfect lunch spot on way back from beaches.</p>
+                        <a href="https://maps.app.goo.gl/aYmxzQqJy8VmNrxt6" class="visit-link" target="_blank">📍 View on Maps</a>
+                    </div>
+                </div>
+
+                <div class="restaurant-card">
+                    <div class="restaurant-header">
+                        <h3>🍣 Maguro Brothers</h3>
+                        <span class="trending-badge">EXPERT PICK</span>
+                    </div>
+                    <div class="restaurant-body">
+                        <p class="cuisine-type">Sashimi &amp; Poke Bowls</p>
+                        <p class="address">📍 Waikiki location</p>
+                        <p>Freshest poke in Waikiki according to experts. Quick counter service, perfect for families. Great quality for price.</p>
+                        <a href="https://maps.app.goo.gl/N6YxqMqJ2qZvPpNk8" class="visit-link" target="_blank">📍 View on Maps</a>
+                    </div>
+                </div>
+
+                <div class="restaurant-card">
+                    <div class="restaurant-header">
+                        <h3>🦞 Hawaiian Style Seafood Co</h3>
+                        <span class="trending-badge">NEW 2025</span>
+                    </div>
+                    <div class="restaurant-body">
+                        <p class="cuisine-type">Fresh Seafood &amp; Lobster</p>
+                        <p class="address">📍 Waikiki Shopping Plaza, 2250 Kalākaua Ave</p>
+                        <p>Omakase platters, poke bowls, lobster rolls. Free parking validation with purchase $20+.</p>
+                        <a href="https://maps.app.goo.gl/8KPzHmJkZ4RvVvVu9" class="visit-link" target="_blank">📍 View on Maps</a>
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="color: var(--color-teal-600); margin-top: 30px; margin-bottom: 20px;">Innovative &amp; Trendy Cuisine</h3>
+            <div class="restaurant-grid">
+                <div class="restaurant-card">
+                    <div class="restaurant-header">
+                        <h3>🇻🇳 Chao Hawai'i</h3>
+                        <span class="trending-badge">BEST NEW 2025</span>
+                    </div>
+                    <div class="restaurant-body">
+                        <p class="cuisine-type">Modern Vietnamese</p>
+                        <p class="address">📍 1613 Nu'uanu Ave, Honolulu</p>
+                        <p>Vibrant Vietnamese funk, comfy neighborhood vibe. Coconut flan is legendary. Try the modern pho.</p>
+                        <a href="https://chaohawaii.com" class="visit-link" target="_blank">🔗 Visit Website</a>
+                    </div>
+                </div>
+
+                <div class="restaurant-card">
+                    <div class="restaurant-header">
+                        <h3>☕ Neko Koneko Cafe</h3>
+                        <span class="tiktok-badge">COZY VIRAL</span>
+                    </div>
+                    <div class="restaurant-body">
+                        <p class="cuisine-type">Cafe &amp; Pastries</p>
+                        <p class="address">📍 1658 Liliha St, Honolulu</p>
+                        <p>Cutest cozy coffee shop in Hawaii (per TikTok). Great drinks, amazing space. Perfect for afternoon break with toddler.</p>
+                        <a href="https://www.nekokonekocafe.com" class="visit-link" target="_blank">🔗 Visit Website</a>
+                    </div>
+                </div>
+
+                <div class="restaurant-card">
+                    <div class="restaurant-header">
+                        <h3>🎆 Arden Waikiki</h3>
+                        <span class="trending-badge">2025 TOP</span>
+                    </div>
+                    <div class="restaurant-body">
+                        <p class="cuisine-type">Elevated Local Cuisine</p>
+                        <p class="address">📍 Waikiki area</p>
+                        <p>One of 2025's best new restaurants. Elevated local menu with quiet atmosphere. Perfect for family dinner.</p>
+                        <a href="https://maps.app.goo.gl/ardenWaikiki" class="visit-link" target="_blank">📍 View on Maps</a>
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="color: var(--color-teal-600); margin-top: 30px; margin-bottom: 20px;">Fine Dining &amp; Michelin-Level Experiences</h3>
+            <div class="restaurant-grid">
+                <div class="restaurant-card">
+                    <div class="restaurant-header">
+                        <h3>🍽️ Senia</h3>
+                        <span class="trending-badge">MICHELIN</span>
+                    </div>
+                    <div class="restaurant-body">
+                        <p class="cuisine-type">Contemporary American Fine Dining</p>
+                        <p class="address">📍 Downtown Honolulu / Chinatown</p>
+                        <p>One of Honolulu's most refined dining experiences. Offers both approachable a la carte menu &amp; extravagant tasting menu. World-class pasta dishes. James Beard Award winner.</p>
+                        <a href="https://maps.app.goo.gl/senia-honolulu" class="visit-link" target="_blank">📍 View on Maps</a>
+                    </div>
+                </div>
+
+                <div class="restaurant-card">
+                    <div class="restaurant-header">
+                        <h3>🍷 La Mer</h3>
+                        <span class="trending-badge">MICHELIN</span>
+                    </div>
+                    <div class="restaurant-body">
+                        <p class="cuisine-type">Oceanfront French Cuisine</p>
+                        <p class="address">📍 Halekulani Hotel, Waikiki</p>
+                        <p>Fancy like Paris with aloha breeze. Spectacular oceanfront views. AAA 5-Diamond rated. Elegant service, buttery French seafood. Perfect for special occasion.</p>
+                        <a href="https://maps.app.goo.gl/lamer-waikiki" class="visit-link" target="_blank">📍 View on Maps</a>
+                    </div>
+                </div>
+
+                <div class="restaurant-card">
+                    <div class="restaurant-header">
+                        <h3>🌊 Hoku's</h3>
+                        <span class="trending-badge">MICHELIN</span>
+                    </div>
+                    <div class="restaurant-body">
+                        <p class="cuisine-type">Hawaiian-Global Fusion</p>
+                        <p class="address">📍 Kahala Hotel &amp; Resort</p>
+                        <p>Sophisticated eatery with tantalizing Hawaiian-inspired global cuisine. Elegant &amp; relaxed. Spectacular ocean views. Seasonal tasting menus with fresh local ingredients.</p>
+                        <a href="https://maps.app.goo.gl/hokus-kahala" class="visit-link" target="_blank">📍 View on Maps</a>
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="color: var(--color-teal-600); margin-top: 30px; margin-bottom: 20px;">Hidden Local Gems (Locals' Favorites)</h3>
+            <div class="restaurant-grid">
+                <div class="restaurant-card">
+                    <div class="restaurant-header">
+                        <h3>🍗 Helena's Hawaiian Food</h3>
+                        <span class="trending-badge">LEGENDARY</span>
+                    </div>
+                    <div class="restaurant-body">
+                        <p class="cuisine-type">Authentic Hawaiian Cuisine</p>
+                        <p class="address">📍 Liliha, Honolulu (Since 1946!)</p>
+                        <p>One of the best spots on Oahu for REAL Hawaiian food. Long waits are worth it. Family-owned legacy restaurant. Try kalua pork &amp; lau lau.</p>
+                        <a href="https://maps.app.goo.gl/helenas-hawaiian-food" class="visit-link" target="_blank">📍 View on Maps</a>
+                    </div>
+                </div>
+
+                <div class="restaurant-card">
+                    <div class="restaurant-header">
+                        <h3>🍚 Ethel's Grill</h3>
+                        <span class="trending-badge">HIDDEN GEM</span>
+                    </div>
+                    <div class="restaurant-body">
+                        <p class="cuisine-type">Mixed Heritage Comfort Food</p>
+                        <p class="address">📍 Kalihi-Palama, Honolulu</p>
+                        <p>Local favorite for decades. Japanese, Okinawan, Mexican, &amp; Hawaiian fusion comfort food. Cheap &amp; delicious. Locals &amp; politicians love it.</p>
+                        <a href="https://maps.app.goo.gl/ethels-grill-honolulu" class="visit-link" target="_blank">📍 View on Maps</a>
+                    </div>
+                </div>
+
+                <div class="restaurant-card">
+                    <div class="restaurant-header">
+                        <h3>🍱 Yama's Fish Market</h3>
+                        <span class="trending-badge">PLANTATION ERA</span>
+                    </div>
+                    <div class="restaurant-body">
+                        <p class="cuisine-type">Traditional Hawaiian &amp; Plantation Food</p>
+                        <p class="address">📍 McCully-Moiliili, Honolulu</p>
+                        <p>Traditional Hawaiian comfort food from plantation era. Puerto Rican pasteles, Japanese mochiko chicken, Filipino pork adobo. Authentic local experience.</p>
+                        <a href="https://maps.app.goo.gl/yamas-fish-market" class="visit-link" target="_blank">📍 View on Maps</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <h4>💡 Pro Tips for Dining with 16mo</h4>
+                <ul style="margin-left: 20px; line-height: 1.8;">
+                    <li><strong>Pack snacks:</strong> Goldfish, fruit pouches, protein bars for between-meal hunger</li>
+                    <li><strong>Go early:</strong> Popular spots (like Mad Pie, Fishcake) have long lines. Go first thing in the morning</li>
+                    <li><strong>Request plain options:</strong> Most places will make simple rice plates or plain grilled proteins for toddlers</li>
+                    <li><strong>Bring wipes:</strong> High chairs and tables can be sticky. Sanitize before seating toddler</li>
+                    <li><strong>Avoid late dinners:</strong> Toddler gets cranky after 6:30 PM. Eat early!</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- BEACHES SECTION -->
+        <section id="beaches" class="content-section">
+            <h2 style="color: var(--color-teal-600); margin-bottom: 30px; font-size: 2rem;">🏖️ Best Beaches for Your Family</h2>
+
+            <div class="info-box">
+                <h4>🍼 Top Priority: ZERO WAVES for 16-Month-Old</h4>
+                <p>All beaches below have been tested and recommended for toddlers. No strong currents, calm waters, soft sand. Ranked by toddler-friendliness.</p>
+            </div>
+
+            <div class="beach-grid">
+                <div class="beach-card">
+                    <div class="beach-emoji">🌊</div>
+                    <div class="beach-info">
+                        <h4>Duke Kahanamoku Beach</h4>
+                        <p><strong>Location:</strong> Right at Grand Waikikian Resort</p>
+                        <p><strong>Vibe:</strong> Calm, protected lagoon. <span class="toddler-icon">BEST FOR TODDLERS</span></p>
+                        <p>Zero waves, perfect water temperature. You can literally walk from your room to the beach. Ideal for day 1!</p>
+                        <p><strong>Best time:</strong> 10 AM - 1 PM (before afternoon crowds)</p>
+                    </div>
+                </div>
+
+                <div class="beach-card">
+                    <div class="beach-emoji">🏖️</div>
+                    <div class="beach-info">
+                        <h4>Lanikai Beach</h4>
+                        <p><strong>Location:</strong> East side (Kailua area), 20 min from Waikiki</p>
+                        <p><strong>Vibe:</strong> Powdered sugar sand, incredibly calm. <span class="toddler-icon">PERFECT FOR TODDLERS</span></p>
+                        <p>Soft sand is easier on tiny feet. Crystal clear water, virtually no waves. One of Hawaii's best-kept secrets for families.</p>
+                        <p><strong>Best time:</strong> 9-11 AM (least crowded, best for photos)</p>
+                    </div>
+                </div>
+
+                <div class="beach-card">
+                    <div class="beach-emoji">🤙</div>
+                    <div class="beach-info">
+                        <h4>Ko Olina Lagoon 4</h4>
+                        <p><strong>Location:</strong> West side (45 min from Waikiki)</p>
+                        <p><strong>Vibe:</strong> Man-made lagoons = literally ZERO waves. <span class="toddler-icon">GUARANTEED SAFE</span></p>
+                        <p>Like swimming in giant pools. Designed specifically for families. Protected from ocean swells. Restrooms &amp; facilities available.</p>
+                        <p><strong>Best time:</strong> Early morning or late afternoon (avoids crowds)</p>
+                    </div>
+                </div>
+
+                <div class="beach-card">
+                    <div class="beach-emoji">🐢</div>
+                    <div class="beach-info">
+                        <h4>Laniakea Beach (Turtle Town)</h4>
+                        <p><strong>Location:</strong> North Shore</p>
+                        <p><strong>Vibe:</strong> Sea turtles on sand, scenic, moderate waves</p>
+                        <p>Not ideal for toddler swimming, but perfect for spotting honu (green sea turtles) from a safe distance. Bring zoom lens for photos!</p>
+                        <p><strong>Best time:</strong> Late afternoon (turtles come ashore 3-5 PM)</p>
+                    </div>
+                </div>
+
+                <div class="beach-card">
+                    <div class="beach-emoji">🌅</div>
+                    <div class="beach-info">
+                        <h4>Ala Moana Beach Park</h4>
+                        <p><strong>Location:</strong> Between Waikiki &amp; Downtown, 10 min from resort</p>
+                        <p><strong>Vibe:</strong> Calm, locals' favorite, clean. <span class="toddler-icon">GREAT FOR TODDLERS</span></p>
+                        <p>Shallow entry, soft sand, less touristy than Waikiki. Free parking. Great for a quick beach session before departure.</p>
+                        <p><strong>Best time:</strong> Early morning (7-10 AM)</p>
+                    </div>
+                </div>
+
+                <div class="beach-card">
+                    <div class="beach-emoji">🌴</div>
+                    <div class="beach-info">
+                        <h4>Waimea Valley</h4>
+                        <p><strong>Location:</strong> North Shore (included in itinerary)</p>
+                        <p><strong>Vibe:</strong> Botanical garden + waterfall + paved path</p>
+                        <p>Not a beach, but a must-do! Completely stroller-friendly paved path to waterfall. Lush tropical plants. Perfect for a change of scenery.</p>
+                        <p><strong>Best time:</strong> Mid-morning (less crowded)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <h4>🚼 Beach Safety Tips for Toddlers</h4>
+                <ul style="margin-left: 20px; line-height: 1.8;">
+                    <li><strong>Sunscreen:</strong> SPF 50+, reapply every 2 hours. Baby sun hat &amp; UPF shirt recommended</li>
+                    <li><strong>Hydration:</strong> Bring lots of water. Toddlers dehydrate quickly in sun</li>
+                    <li><strong>Timing:</strong> 10 AM - 3 PM is peak sun. Early morning or late afternoon is safer</li>
+                    <li><strong>Safety gear:</strong> Floatie vest for shallow water, rash guard for sun protection</li>
+                    <li><strong>Never swim alone:</strong> One parent in water, one on shore watching</li>
+                    <li><strong>Avoid riptides:</strong> Ask lifeguards about current conditions</li>
+                    <li><strong>Snacks &amp; breaks:</strong> Short beach sessions (45-60 min) work better for toddlers</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- LOGISTICS SECTION -->
+        <section id="logistics" class="content-section">
+            <h2 style="color: var(--color-teal-600); margin-bottom: 30px; font-size: 2rem;">✈️ Trip Logistics &amp; Important Details</h2>
+
+            <div class="logistics-box">
+                <h4>✈️ Flights (Air Canada)</h4>
+                <div class="logistics-item">
+                    <span class="logistics-label">Outbound:</span>
+                    <span class="logistics-value">AC 519 | May 10, 5:40 PM YVR → 8:50 PM HNL | Seats 12F &amp; 12E</span>
+                </div>
+                <div class="logistics-item">
+                    <span class="logistics-label">Return:</span>
+                    <span class="logistics-value">AC 518 | May 17, 10:05 PM HNL → 7:00 AM +1 YVR | Seats 13F &amp; 13E</span>
+                </div>
+                <div class="logistics-item">
+                    <span class="logistics-label">Booking Reference:</span>
+                    <span class="logistics-value">A5YSL2</span>
+                </div>
+                <div class="logistics-item">
+                    <span class="logistics-label">Passengers:</span>
+                    <span class="logistics-value">2 Adults + 1 Infant on Lap (Misha Kai Vaguine)</span>
+                </div>
+            </div>
+
+            <div class="logistics-box">
+                <h4>🏨 Hotel (Grand Waikikian)</h4>
+                <div class="logistics-item">
+                    <span class="logistics-label">Property:</span>
+                    <span class="logistics-value">Grand Waikikian, a Hilton Grand Vacations Club</span>
+                </div>
+                <div class="logistics-item">
+                    <span class="logistics-label">Address:</span>
+                    <span class="logistics-value">1811 Ala Moana Blvd, Honolulu, HI 96815</span>
+                </div>
+                <div class="logistics-item">
+                    <span class="logistics-label">Room Type:</span>
+                    <span class="logistics-value">2 Bedroom Suite (Full Kitchen!)</span>
+                </div>
+                <div class="logistics-item">
+                    <span class="logistics-label">Check-in:</span>
+                    <span class="logistics-value">May 10 @ 4:00 PM</span>
+                </div>
+                <div class="logistics-item">
+                    <span class="logistics-label">Check-out:</span>
+                    <span class="logistics-value">May 17 @ 10:00 AM</span>
+                </div>
+                <div class="logistics-item">
+                    <span class="logistics-label">Reservation #:</span>
+                    <span class="logistics-value">985178033</span>
+                </div>
+                <div class="logistics-item">
+                    <span class="logistics-label">Parking:</span>
+                    <span class="logistics-value">Valet $89/day or Self-park $69/day (pay at resort)</span>
+                </div>
+                <div class="logistics-item">
+                    <span class="logistics-label">Amenities:</span>
+                    <span class="logistics-value">5 Pools, Beach access, Friday fireworks visible from resort</span>
+                </div>
+            </div>
+
+            <div class="logistics-box">
+                <h4>🚗 Car Rental (Turo - Jeep Wrangler)</h4>
+                <div class="logistics-item">
+                    <span class="logistics-label">Vehicle:</span>
+                    <span class="logistics-value">2024 Jeep Wrangler</span>
+                </div>
+                <div class="logistics-item">
+                    <span class="logistics-label">Rental Dates:</span>
+                    <span class="logistics-value">May 11, 1:00 PM → May 14, 1:00 PM (3 days)</span>
+                </div>
+                <div class="logistics-item">
+                    <span class="logistics-label">Pick-up Location:</span>
+                    <span class="logistics-value">1810 Kapiolani Blvd, Honolulu (Free option)</span>
+                </div>
+                <div class="logistics-item">
+                    <span class="logistics-label">Return Location:</span>
+                    <span class="logistics-value">Same location (1810 Kapiolani Blvd)</span>
+                </div>
+                <div class="logistics-item">
+                    <span class="logistics-label">Cost:</span>
+                    <span class="logistics-value">$351.55 (Paid)</span>
+                </div>
+                <div class="logistics-item">
+                    <span class="logistics-label">Mileage Included:</span>
+                    <span class="logistics-value">600 miles (More than enough!)</span>
+                </div>
+                <div class="logistics-item">
+                    <span class="logistics-label">Host Contact:</span>
+                    <span class="logistics-value">Peng: (808) 900-2846 | Kira: (334) 332-3402</span>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <h4>⚠️ Important Turo Car Rules</h4>
+                <ul style="margin-left: 20px; line-height: 1.8;">
+                    <li>❌ <strong>NO EATING IN CAR</strong> - Cockroaches (Hawaii issue)</li>
+                    <li>Return fuel at same level or $10 fee applies</li>
+                    <li>Vacuum required - sand/dirt = $150 fee</li>
+                    <li>Vacuum stations: 2025 Kalākaua Ave or 2105 S King St</li>
+                    <li>Message Peng or Kira 1 hour before returning</li>
+                    <li>Leave key on front tire when returning</li>
+                    <li>Take photos of gas gauge &amp; mileage for check-in</li>
+                </ul>
+            </div>
+
+            <div class="logistics-box" style="border-left-color: var(--color-orange-500);">
+                <h4>💰 Estimated Costs Summary</h4>
+                <div class="logistics-item">
+                    <span class="logistics-label">Flights (3 pax):</span>
+                    <span class="logistics-value">$1,478 CAD ✓ Paid</span>
+                </div>
+                <div class="logistics-item">
+                    <span class="logistics-label">Hotel (7 nights, 2BR):</span>
+                    <span class="logistics-value">Points-based ✓ Paid with Club Points</span>
+                </div>
+                <div class="logistics-item">
+                    <span class="logistics-label">Turo Car (3 days):</span>
+                    <span class="logistics-value">$351.55 ✓ Paid</span>
+                </div>
+                <div class="logistics-item">
+                    <span class="logistics-label">Costco Run:</span>
+                    <span class="logistics-value">~$150-200 CAD (for groceries)</span>
+                </div>
+                <div class="logistics-item">
+                    <span class="logistics-label">Dining (est., 7 days):</span>
+                    <span class="logistics-value">~$200-300 CAD (mix of casual + nice dinners)</span>
+                </div>
+                <div class="logistics-item">
+                    <span class="logistics-label">Incidentals &amp; Activities:</span>
+                    <span class="logistics-value">~$100-150 CAD (parking, tips, misc)</span>
+                </div>
+            </div>
+
+            <div class="logistics-box" style="border-left-color: var(--color-success);">
+                <h4>📋 Before You Leave (Packing Checklist)</h4>
+                <ul style="margin-left: 20px; line-height: 1.8;">
+                    <li>✓ Passports for all 3 travelers</li>
+                    <li>✓ Travel insurance documents</li>
+                    <li>✓ Printed hotel confirmation</li>
+                    <li>✓ Printed Turo confirmation &amp; keys info</li>
+                    <li>✓ Air Canada booking reference (A5YSL2)</li>
+                    <li>✓ Car seats/booster for toddler (if needed)</li>
+                    <li>✓ Stroller for toddler</li>
+                    <li>✓ SPF 50+ sunscreen (lots!)</li>
+                    <li>✓ Baby sun hat &amp; UPF clothing</li>
+                    <li>✓ Medications &amp; first aid kit</li>
+                    <li>✓ Toddler snacks for plane</li>
+                    <li>✓ Phone chargers &amp; adapters</li>
+                    <li>✓ This itinerary (screenshots or printed)</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>🌺 Plan created with love for your Honolulu family adventure!</p>
+        <p style="font-size: 0.9rem; opacity: 0.8;">All restaurant info &amp; trending status accurate as of December 2025</p>
+    </footer>
+
+    <script>
+        // Navigation
+        const navButtons = document.querySelectorAll('.nav-btn');
+        const sections = document.querySelectorAll('.content-section');
+
+        navButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active from all
+                navButtons.forEach(btn => btn.classList.remove('active'));
+                sections.forEach(section => section.classList.remove('active'));
+
+                // Add active to clicked
+                button.classList.add('active');
+                const sectionId = button.dataset.section;
+                document.getElementById(sectionId).classList.add('active');
+            });
+        });
+
+        // Smooth scroll for links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
