@@ -3,328 +3,233 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vaguine Family Hawaii 🌺 May 10–17, 2026</title>
+<title>Vaguine Family Hawaii 🌺 May 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap');
+:root {
+  --ocean: #1a6b8a;
+  --ocean-dark: #0e4a62;
+  --ocean-light: #e8f4f8;
+  --coral: #e8604c;
+  --palm: #2d6a35;
+  --palm-light: #e6f3e8;
+  --sand: #f5e6c8;
+  --sunset: #d4860a;
+  --sunset-light: #fff8ec;
+  --purple: #6d28d9;
+  --purple-light: #f3f0ff;
+  --white: #ffffff;
+  --bg: #f0f6fa;
+  --dark: #1c2b3a;
+  --muted: #5a7080;
+  --border: #d4e6ef;
+  --card-shadow: 0 2px 16px rgba(26,107,138,0.08);
+  --card-shadow-hover: 0 6px 28px rgba(26,107,138,0.14);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--dark);line-height:1.6;-webkit-font-smoothing:antialiased;}
+a{color:var(--ocean);text-decoration:none;}
+a:hover{text-decoration:underline;}
 
-  :root {
-    --ocean: #1a6b8a;
-    --coral: #e8604c;
-    --sand: #f5e6c8;
-    --palm: #3a7d44;
-    --sunset: #f0a500;
-    --sky: #e8f4f8;
-    --white: #ffffff;
-    --dark: #1c2b3a;
-    --muted: #6b7c8d;
-    --border: #d4e6ef;
-  }
+/* ── HERO ── */
+.hero{
+  background:linear-gradient(150deg,#072f45 0%,#0e5473 35%,#1a7a8a 65%,#2a9d7f 100%);
+  color:white;padding:56px 24px 72px;text-align:center;position:relative;overflow:hidden;
+}
+.hero::after{
+  content:'';position:absolute;bottom:-1px;left:0;right:0;height:56px;
+  background:var(--bg);clip-path:ellipse(55% 100% at 50% 100%);
+}
+.hero-emoji{font-size:48px;display:block;margin-bottom:14px;}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(28px,5vw,46px);font-weight:700;margin-bottom:6px;letter-spacing:-0.5px;}
+.hero-sub{font-size:clamp(14px,2.5vw,18px);opacity:0.82;margin-bottom:22px;font-weight:300;}
+.hero-party{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;}
+.party-tag{background:rgba(255,255,255,0.13);border:1px solid rgba(255,255,255,0.28);padding:5px 14px;border-radius:50px;font-size:13px;font-weight:500;}
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+/* ── TAB NAV ── */
+.tab-nav-wrap{
+  position:sticky;top:0;z-index:100;
+  background:rgba(240,246,250,0.96);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+  padding:0 20px;
+}
+.tab-nav{
+  max-width:1100px;margin:0 auto;
+  display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;
+  padding:10px 0;
+}
+.tab-nav::-webkit-scrollbar{display:none;}
+.tab-btn{
+  border:none;background:transparent;
+  color:var(--muted);font-family:'Inter',sans-serif;font-size:14px;font-weight:600;
+  padding:8px 16px;border-radius:10px;cursor:pointer;white-space:nowrap;
+  transition:all 150ms ease;
+}
+.tab-btn:hover{background:var(--ocean-light);color:var(--ocean);}
+.tab-btn.active{background:var(--ocean);color:white;}
+.tab-panel{display:none;}
+.tab-panel.active{display:block;}
 
-  body {
-    font-family: 'Inter', sans-serif;
-    background: #f0f6fa;
-    color: var(--dark);
-    line-height: 1.6;
-  }
+/* ── SECTION TITLE ── */
+.section-title{
+  max-width:1100px;margin:36px auto 16px;padding:0 24px;
+  font-family:'Playfair Display',serif;font-size:clamp(22px,3vw,28px);color:var(--ocean);
+  display:flex;align-items:center;gap:12px;
+}
+.section-title::after{content:'';flex:1;height:1px;background:var(--border);}
 
-  /* HERO */
-  .hero {
-    background: linear-gradient(135deg, #0a3d55 0%, #1a6b8a 40%, #2a9d8f 70%, #52b788 100%);
-    color: white;
-    padding: 60px 40px 50px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-  .hero::before {
-    content: '';
-    position: absolute;
-    bottom: -1px; left: 0; right: 0;
-    height: 60px;
-    background: #f0f6fa;
-    clip-path: ellipse(55% 100% at 50% 100%);
-  }
-  .hero-emoji { font-size: 52px; display: block; margin-bottom: 16px; }
-  .hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 42px;
-    font-weight: 700;
-    margin-bottom: 8px;
-    letter-spacing: -0.5px;
-  }
-  .hero-sub {
-    font-size: 18px;
-    opacity: 0.85;
-    margin-bottom: 20px;
-    font-weight: 300;
-  }
-  .hero-party {
-    display: inline-flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 10px;
-  }
-  .party-tag {
-    background: rgba(255,255,255,0.15);
-    border: 1px solid rgba(255,255,255,0.3);
-    padding: 6px 16px;
-    border-radius: 50px;
-    font-size: 13px;
-    font-weight: 500;
-    backdrop-filter: blur(4px);
-  }
+/* ── BOOKINGS ── */
+.bookings-wrap{max-width:1100px;margin:0 auto;padding:32px 24px 8px;}
+.bookings-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:14px;}
+.bk-card{
+  background:white;border-radius:16px;padding:18px 20px;
+  box-shadow:var(--card-shadow);
+  border-left:4px solid var(--ocean);
+  display:flex;flex-direction:column;gap:5px;
+}
+.bk-card.confirmed{border-left-color:var(--palm);}
+.bk-card.alert{border-left-color:var(--coral);}
+.bk-icon{font-size:22px;}
+.bk-title{font-weight:700;font-size:15px;color:var(--dark);}
+.bk-detail{font-size:13px;color:var(--muted);line-height:1.55;}
+.bk-detail strong{color:var(--dark);}
+.bk-conf{font-size:12px;font-weight:700;color:var(--ocean);margin-top:2px;}
+.bk-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px;}
+.bk-links a{font-size:12px;font-weight:600;color:var(--ocean);background:var(--ocean-light);padding:3px 10px;border-radius:6px;}
 
-  /* BOOKING BANNER */
-  .bookings-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 16px;
-    padding: 40px 40px 10px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  .booking-card {
-    background: white;
-    border-radius: 16px;
-    padding: 20px 22px;
-    box-shadow: 0 2px 12px rgba(26,107,138,0.08);
-    border-left: 4px solid var(--ocean);
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-  }
-  .booking-card.confirmed { border-left-color: var(--palm); }
-  .booking-card.alert { border-left-color: var(--coral); }
-  .booking-card .bk-icon { font-size: 24px; }
-  .booking-card .bk-title { font-weight: 600; font-size: 15px; color: var(--dark); }
-  .booking-card .bk-detail { font-size: 13px; color: var(--muted); line-height: 1.5; }
-  .booking-card .bk-conf { font-size: 12px; font-weight: 600; color: var(--ocean); margin-top: 4px; }
-  .booking-card a { color: var(--ocean); text-decoration: none; font-size: 12px; font-weight: 500; }
-  .booking-card a:hover { text-decoration: underline; }
+/* ── DAYS ── */
+.days-wrap{max-width:1100px;margin:0 auto;padding:0 24px 48px;display:flex;flex-direction:column;gap:24px;}
+.day-card{background:white;border-radius:20px;overflow:hidden;box-shadow:var(--card-shadow);}
+.day-header{padding:20px 24px 16px;display:flex;align-items:flex-start;gap:16px;border-bottom:1px solid #eef4f8;}
+.day-num{
+  background:var(--ocean);color:white;font-family:'Playfair Display',serif;
+  font-size:26px;font-weight:700;min-width:52px;height:52px;
+  border-radius:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.day-info{flex:1;min-width:0;}
+.day-date{font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:1px;}
+.day-title{font-family:'Playfair Display',serif;font-size:clamp(18px,2.5vw,22px);color:var(--dark);margin:3px 0 7px;line-height:1.3;}
+.day-tags{display:flex;gap:6px;flex-wrap:wrap;}
+.tag{padding:3px 10px;border-radius:50px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.4px;white-space:nowrap;}
+.tag.jeep{background:#fff3cd;color:#7a5700;}
+.tag.beach{background:#d1f0f5;color:#0a5060;}
+.tag.food{background:#fde8e4;color:#8b2211;}
+.tag.date{background:#ede9ff;color:#4c1d95;}
+.tag.nap{background:#d8f0de;color:#1a5c25;}
+.tag.alert{background:#fde8e4;color:#8b2211;}
+.tag.fireworks{background:#fff3cd;color:#7a5700;}
 
-  /* SECTION HEADER */
-  .section-title {
-    max-width: 1200px;
-    margin: 40px auto 16px;
-    padding: 0 40px;
-    font-family: 'Playfair Display', serif;
-    font-size: 28px;
-    color: var(--ocean);
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-  .section-title::after {
-    content: '';
-    flex: 1;
-    height: 2px;
-    background: var(--border);
-    border-radius: 2px;
-  }
+/* ── AGENDA ── */
+.agenda{padding:6px 24px 20px;}
+.agenda-row{
+  display:grid;grid-template-columns:72px 26px 1fr;
+  gap:12px;padding:11px 0;
+  border-bottom:1px solid #f0f5f8;align-items:start;
+}
+.agenda-row:last-child{border-bottom:none;}
+.agenda-time{font-size:12px;font-weight:700;color:var(--ocean);padding-top:1px;font-variant-numeric:tabular-nums;line-height:1.4;}
+.agenda-icon{font-size:17px;padding-top:1px;}
+.agenda-content{min-width:0;}
+.agenda-main{font-size:14px;font-weight:600;color:var(--dark);line-height:1.45;word-break:break-word;}
+.agenda-main a{color:var(--ocean);}
+.agenda-note{font-size:12px;color:var(--muted);margin-top:3px;line-height:1.55;word-break:break-word;}
+.agenda-note a{color:var(--ocean);}
 
-  /* DAY CARDS */
-  .days-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 40px 60px;
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-  }
+/* special rows */
+.row-nap{background:linear-gradient(135deg,#dff2e4,#c9e9d0);border-radius:12px;padding:10px 14px;margin:3px 0;border-left:3px solid var(--palm);}
+.row-nap .agenda-time{color:var(--palm);}
+.row-nap .agenda-main{color:var(--palm);}
+.row-alert{background:linear-gradient(135deg,#fff8e8,#ffe9b0);border-radius:12px;padding:10px 14px;margin:3px 0;border-left:3px solid var(--sunset);}
+.row-alert .agenda-time{color:var(--sunset);}
+.row-alert .agenda-main{color:var(--sunset);}
+.row-date{background:linear-gradient(135deg,#f0ebff,#e3d9ff);border-radius:12px;padding:10px 14px;margin:3px 0;border-left:3px solid var(--purple);}
+.row-date .agenda-time{color:var(--purple);}
+.row-date .agenda-main{color:var(--purple);}
 
-  .day-card {
-    background: white;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 2px 20px rgba(26,107,138,0.07);
-  }
+/* ── OPTIONS BLOCK ── */
+.opts{margin-top:8px;background:var(--ocean-light);border:1px solid var(--border);border-radius:12px;padding:12px 14px;}
+.opts-title{font-size:11px;font-weight:700;color:var(--ocean);text-transform:uppercase;letter-spacing:0.6px;margin-bottom:8px;}
+.opt-row{display:flex;gap:8px;margin-bottom:8px;align-items:flex-start;}
+.opt-row:last-child{margin-bottom:0;}
+.opt-label{font-size:10px;font-weight:800;background:var(--ocean);color:white;padding:3px 8px;border-radius:5px;white-space:nowrap;flex-shrink:0;margin-top:2px;letter-spacing:0.4px;}
+.opt-label.new-rec{background:var(--coral);}
+.opt-text{font-size:13px;color:var(--dark);line-height:1.5;min-width:0;word-break:break-word;overflow-wrap:anywhere;}
+.opt-text a{color:var(--ocean);font-weight:500;}
 
-  .day-header {
-    padding: 22px 28px 18px;
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    border-bottom: 1px solid var(--border);
-  }
-  .day-num {
-    background: var(--ocean);
-    color: white;
-    font-family: 'Playfair Display', serif;
-    font-size: 28px;
-    font-weight: 700;
-    width: 56px; height: 56px;
-    border-radius: 14px;
-    display: flex; align-items: center; justify-content: center;
-    flex-shrink: 0;
-  }
-  .day-info { flex: 1; }
-  .day-date { font-size: 13px; font-weight: 500; color: var(--muted); text-transform: uppercase; letter-spacing: 0.8px; }
-  .day-title { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--dark); margin: 4px 0 6px; }
-  .day-tags { display: flex; gap: 8px; flex-wrap: wrap; }
-  .tag {
-    padding: 3px 12px; border-radius: 50px; font-size: 11px; font-weight: 600;
-    text-transform: uppercase; letter-spacing: 0.5px;
-  }
-  .tag.jeep { background: #fff3cd; color: #856404; }
-  .tag.beach { background: #d1ecf1; color: #0c5460; }
-  .tag.food { background: #f8d7da; color: #721c24; }
-  .tag.date { background: #e2d9f3; color: #491f7e; }
-  .tag.nap { background: #d4edda; color: #155724; }
-  .tag.important { background: #f8d7da; color: #721c24; }
-  .tag.fireworks { background: #fff3cd; color: #856404; }
+/* ── FOOD TAB ── */
+.food-wrap{max-width:1100px;margin:0 auto;padding:0 24px 48px;}
+.food-section-head{
+  margin:28px 0 14px;
+  display:flex;align-items:center;gap:10px;
+}
+.food-section-head h3{font-family:'Playfair Display',serif;font-size:20px;color:var(--ocean);}
+.food-section-head::after{content:'';flex:1;height:1px;background:var(--border);}
+.food-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin-bottom:8px;}
+.food-card{
+  background:white;border-radius:16px;padding:16px 18px;
+  box-shadow:var(--card-shadow);
+  border-top:3px solid var(--coral);
+  min-width:0;
+}
+.food-card.friend-pick{border-top-color:var(--palm);}
+.food-card.happy-hour{border-top-color:var(--sunset);}
+.food-card.timed{border-top-color:var(--purple);}
+.fc-icon{font-size:26px;margin-bottom:8px;}
+.fc-name{font-weight:700;font-size:15px;margin-bottom:3px;color:var(--dark);}
+.fc-where{font-size:12px;color:var(--muted);margin-bottom:5px;}
+.fc-where a{color:var(--ocean);}
+.fc-day{font-size:11px;font-weight:700;color:var(--ocean);margin-bottom:8px;}
+.fc-orders{list-style:none;padding:0;margin:0;}
+.fc-orders li{font-size:12px;color:var(--muted);padding:3px 0;border-top:1px solid #f0f4f7;line-height:1.4;}
+.fc-orders li:first-child{border-top:none;}
+.fc-badge{display:inline-block;font-size:10px;font-weight:700;padding:2px 8px;border-radius:50px;margin-bottom:6px;}
+.badge-original{background:#dff2e4;color:#1a5c25;}
+.badge-friends{background:#fde8e4;color:#8b2211;}
+.badge-hh{background:#fff3cd;color:#7a5700;}
+.badge-timed{background:#ede9ff;color:#4c1d95;}
+.badge-warn{background:#fff3cd;color:#7a5700;}
+.star{color:#e8a000;font-size:13px;}
 
-  /* AGENDA */
-  .agenda { padding: 8px 28px 24px; }
-  .agenda-row {
-    display: flex;
-    gap: 16px;
-    padding: 12px 0;
-    border-bottom: 1px solid #f0f4f7;
-    align-items: flex-start;
-  }
-  .agenda-row:last-child { border-bottom: none; }
-  .agenda-time {
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--ocean);
-    min-width: 68px;
-    padding-top: 2px;
-    font-variant-numeric: tabular-nums;
-  }
-  .agenda-icon { font-size: 18px; flex-shrink: 0; padding-top: 1px; }
-  .agenda-content { flex: 1; }
-  .agenda-main { font-size: 14px; font-weight: 500; color: var(--dark); }
-  .agenda-main a { color: var(--ocean); text-decoration: none; }
-  .agenda-main a:hover { text-decoration: underline; }
-  .agenda-note { font-size: 12px; color: var(--muted); margin-top: 3px; line-height: 1.5; }
-  .agenda-note a { color: var(--ocean); }
-  .agenda-nap {
-    background: linear-gradient(135deg, #d4edda, #c3e6cb);
-    border-radius: 10px;
-    padding: 10px 14px;
-    margin: 4px 0;
-    border-left: 3px solid var(--palm);
-  }
-  .agenda-nap .agenda-main { color: var(--palm); }
-  .agenda-alert {
-    background: linear-gradient(135deg, #fff3cd, #ffeaa7);
-    border-radius: 10px;
-    padding: 10px 14px;
-    margin: 4px 0;
-    border-left: 3px solid var(--sunset);
-  }
-  .agenda-alert .agenda-main { color: #856404; }
-  .agenda-datenight {
-    background: linear-gradient(135deg, #f3e8ff, #e9d5ff);
-    border-radius: 10px;
-    padding: 10px 14px;
-    margin: 4px 0;
-    border-left: 3px solid #7c3aed;
-  }
-  .agenda-datenight .agenda-main { color: #5b21b6; }
+/* ── NAP TABLE ── */
+.nap-wrap{max-width:1100px;margin:0 auto;padding:0 24px 40px;}
+.nap-table-box{background:white;border-radius:16px;overflow:hidden;box-shadow:var(--card-shadow);}
+.nap-table-box table{width:100%;border-collapse:collapse;}
+.nap-table-box th{background:var(--ocean);color:white;padding:12px 16px;text-align:left;font-size:13px;font-weight:600;}
+.nap-table-box td{padding:12px 16px;font-size:13px;border-bottom:1px solid #f0f5f8;vertical-align:top;line-height:1.5;}
+.nap-table-box tr:last-child td{border-bottom:none;}
+.nap-badge{font-weight:700;color:var(--palm);}
 
-  /* OPTIONS BLOCK */
-  .options-block {
-    margin: 4px 0;
-    padding: 14px 18px;
-    background: var(--sky);
-    border-radius: 12px;
-    border: 1px solid var(--border);
-  }
-  .options-title { font-size: 12px; font-weight: 700; color: var(--ocean); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; }
-  .option-row { display: flex; gap: 10px; margin-bottom: 8px; align-items: flex-start; }
-  .option-row:last-child { margin-bottom: 0; }
-  .option-label { font-size: 11px; font-weight: 700; background: var(--ocean); color: white; padding: 2px 8px; border-radius: 4px; white-space: nowrap; flex-shrink: 0; margin-top: 2px; }
-  .option-text { font-size: 13px; color: var(--dark); line-height: 1.5; }
-  .option-text a { color: var(--ocean); text-decoration: none; font-weight: 500; }
+/* ── CHECKLIST ── */
+.checklist-wrap{max-width:1100px;margin:0 auto;padding:0 24px 60px;}
+.checklist-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:14px;margin-top:4px;}
+.checklist-card{background:white;border-radius:16px;padding:20px;box-shadow:var(--card-shadow);}
+.checklist-card h3{font-size:13px;font-weight:700;color:var(--ocean);margin-bottom:12px;display:flex;align-items:center;gap:8px;text-transform:uppercase;letter-spacing:0.5px;}
+.cl-item{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid #f0f5f8;font-size:13px;color:var(--dark);line-height:1.45;}
+.cl-item:last-child{border-bottom:none;}
+.cl-box{width:16px;height:16px;border:2px solid var(--border);border-radius:4px;flex-shrink:0;margin-top:2px;}
+.cl-item.urgent .cl-text{color:var(--coral);font-weight:600;}
+.cl-item a{color:var(--ocean);font-weight:500;}
 
-  /* CHECKLIST */
-  .checklist-section {
-    max-width: 1200px;
-    margin: 0 auto 60px;
-    padding: 0 40px;
-  }
-  .checklist-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 16px;
-    margin-top: 16px;
-  }
-  .checklist-card {
-    background: white;
-    border-radius: 16px;
-    padding: 22px;
-    box-shadow: 0 2px 12px rgba(26,107,138,0.07);
-  }
-  .checklist-card h3 { font-size: 14px; font-weight: 700; color: var(--ocean); margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
-  .checklist-item {
-    display: flex; align-items: flex-start; gap: 10px;
-    padding: 8px 0;
-    border-bottom: 1px solid #f0f4f7;
-    font-size: 13px;
-  }
-  .checklist-item:last-child { border-bottom: none; }
-  .check-box {
-    width: 18px; height: 18px; border: 2px solid var(--border);
-    border-radius: 4px; flex-shrink: 0; margin-top: 1px;
-  }
-  .checklist-item a { color: var(--ocean); text-decoration: none; font-weight: 500; }
-  .urgent { color: var(--coral); font-weight: 600; }
+/* ── FOOTER ── */
+.footer{background:var(--dark);color:rgba(255,255,255,0.55);text-align:center;padding:28px 24px;font-size:13px;}
+.footer strong{color:white;}
 
-  /* FOOD GUIDE */
-  .food-grid {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 40px 40px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 14px;
-  }
-  .food-card {
-    background: white;
-    border-radius: 14px;
-    padding: 16px 18px;
-    box-shadow: 0 2px 10px rgba(26,107,138,0.07);
-    border-top: 3px solid var(--coral);
-  }
-  .food-card .food-icon { font-size: 24px; margin-bottom: 8px; }
-  .food-card .food-name { font-weight: 600; font-size: 14px; margin-bottom: 4px; }
-  .food-card .food-where { font-size: 12px; color: var(--muted); margin-bottom: 4px; }
-  .food-card .food-day { font-size: 11px; font-weight: 600; color: var(--ocean); }
-  .food-card a { color: var(--ocean); text-decoration: none; }
-
-  /* NAP SUMMARY */
-  .nap-table {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 40px 40px;
-  }
-  .nap-table table { width: 100%; border-collapse: collapse; background: white; border-radius: 14px; overflow: hidden; box-shadow: 0 2px 12px rgba(26,107,138,0.07); }
-  .nap-table th { background: var(--ocean); color: white; padding: 12px 16px; text-align: left; font-size: 13px; font-weight: 600; }
-  .nap-table td { padding: 12px 16px; font-size: 13px; border-bottom: 1px solid #f0f4f7; }
-  .nap-table tr:last-child td { border-bottom: none; }
-  .nap-type { font-weight: 600; }
-
-  /* FOOTER */
-  .footer {
-    background: var(--dark);
-    color: rgba(255,255,255,0.6);
-    text-align: center;
-    padding: 30px 40px;
-    font-size: 13px;
-  }
-  .footer strong { color: white; }
-
-  @media (max-width: 700px) {
-    .hero h1 { font-size: 28px; }
-    .bookings-grid, .days-container, .food-grid, .checklist-section, .nap-table { padding: 0 16px; }
-    .section-title { padding: 0 16px; }
-    .bookings-grid { padding: 24px 16px 0; }
-    .days-container { padding: 0 16px 40px; }
-  }
+/* ── MOBILE ── */
+@media(max-width:640px){
+  .hero{padding:44px 16px 60px;}
+  .bookings-wrap,.days-wrap,.food-wrap,.nap-wrap,.checklist-wrap{padding-left:16px;padding-right:16px;}
+  .agenda{padding:4px 16px 16px;}
+  .day-header{padding:16px 16px 12px;}
+  .agenda-row{grid-template-columns:64px 22px 1fr;gap:8px;}
+  .section-title{padding:0 16px;font-size:20px;}
+  .tab-nav-wrap{padding:0 12px;}
+  .tab-btn{font-size:13px;padding:7px 12px;}
+  .opt-row{flex-direction:column;gap:5px;}
+  .food-grid{grid-template-columns:1fr;}
+}
 </style>
 </head>
 <body>
@@ -338,1008 +243,1354 @@
     <span class="party-tag">👨 Gleb</span>
     <span class="party-tag">👩 Zoe</span>
     <span class="party-tag">👶 Misha (16 mo.)</span>
-    <span class="party-tag">👴 Andrei</span>
-    <span class="party-tag">👵 Larissa</span>
+    <span class="party-tag">👴 Deda Andrei</span>
+    <span class="party-tag">👵 Baba Larissa</span>
   </div>
 </div>
 
-<!-- CONFIRMED BOOKINGS -->
+<!-- TAB NAV -->
+<div class="tab-nav-wrap">
+  <div class="tab-nav">
+    <button class="tab-btn active" data-tab="bookings">✅ Bookings</button>
+    <button class="tab-btn" data-tab="schedule">📅 Schedule</button>
+    <button class="tab-btn" data-tab="food">🍜 Food Guide</button>
+    <button class="tab-btn" data-tab="naps">💤 Nap Plan</button>
+    <button class="tab-btn" data-tab="checklist">☑️ Checklist</button>
+  </div>
+</div>
+
+<!-- ═══════════════ BOOKINGS TAB ═══════════════ -->
+<div class="tab-panel active" id="tab-bookings">
 <div class="section-title">✅ Confirmed Bookings</div>
+<div class="bookings-wrap">
 <div class="bookings-grid">
 
-  <div class="booking-card confirmed">
+  <div class="bk-card confirmed">
     <div class="bk-icon">✈️</div>
-    <div class="bk-title">Flights — Gleb, Zoe & Misha</div>
-    <div class="bk-detail">AC519 · May 10 · YVR 17:40 → HNL 20:50<br>Return AC518 · May 17 · HNL 22:05 → YVR 07:00+1<br>Seats 12F / 12E · Economy Comfort</div>
+    <div class="bk-title">Flights — Gleb, Zoe &amp; Misha</div>
+    <div class="bk-detail">AC519 · May 10 · YVR <strong>17:40</strong> → HNL <strong>20:50</strong><br>Return AC518 · May 17 · HNL <strong>22:05</strong> → YVR 07:00+1<br>Seats 12F / 12E · Economy Comfort</div>
     <div class="bk-conf">Ref: A5YSL2</div>
-    <a href="https://book.aircanada.com" target="_blank">→ Manage on Air Canada</a>
+    <div class="bk-links"><a href="https://book.aircanada.com" target="_blank">→ Manage Booking</a></div>
   </div>
 
-  <div class="booking-card confirmed">
+  <div class="bk-card confirmed">
     <div class="bk-icon">✈️</div>
-    <div class="bk-title">Flights — Andrei & Larissa</div>
-    <div class="bk-detail">AC519 · May 10 · YVR 17:20 → HNL 20:40<br>Return AC518 · May 17 · HNL 21:55 → YVR 06:53+1<br>Economy G</div>
+    <div class="bk-title">Flights — Andrei &amp; Larissa</div>
+    <div class="bk-detail">AC519 · May 10 · YVR <strong>17:20</strong> → HNL <strong>20:40</strong><br>Return AC518 · May 17 · HNL <strong>21:55</strong> → YVR 06:53+1<br>Economy G</div>
     <div class="bk-conf">Ref: C898G4</div>
-    <a href="https://book.aircanada.com" target="_blank">→ Manage on Air Canada</a>
+    <div class="bk-links"><a href="https://book.aircanada.com" target="_blank">→ Manage Booking</a></div>
   </div>
 
-  <div class="booking-card confirmed">
+  <div class="bk-card confirmed">
     <div class="bk-icon">🏨</div>
     <div class="bk-title">Grand Waikikian — HGV</div>
-    <div class="bk-detail">1811 Ala Moana Blvd, Honolulu HI<br>Check-in: May 10 at 4:00 PM<br>Check-out: May 17 at 10:00 AM<br>2-Bedroom Resort Unit · 12,000 Club Points<br>🎆 Friday fireworks every week!<br>Valet $89+tax · Self-park $69+tax/day</div>
+    <div class="bk-detail">1811 Ala Moana Blvd, Honolulu HI<br>Check-in: May 10 at 4:00 PM · Check-out: May 17 at 10:00 AM<br>2-Bedroom Resort Unit · 12,000 Club Points<br>🎆 Friday fireworks every week!<br>Valet $89+tax · Self-park $69+tax/day</div>
     <div class="bk-conf">Res: #985178033</div>
-    <a href="https://maps.google.com/?q=Grand+Waikikian+Hilton+1811+Ala+Moana+Blvd+Honolulu" target="_blank">→ Google Maps</a>
+    <div class="bk-links">
+      <a href="https://maps.google.com/?q=Grand+Waikikian+Hilton+1811+Ala+Moana+Blvd+Honolulu" target="_blank">→ Maps</a>
+    </div>
   </div>
 
-  <div class="booking-card confirmed">
+  <div class="bk-card confirmed">
     <div class="bk-icon">🚐</div>
-    <div class="bk-title">Airport Shuttle — Fly Shuttle & Tours</div>
-    <div class="bk-detail">May 10 · Departs HNL at 9:00 PM<br>HNL Airport → Waikiki<br>4 Adults + 1 Infant · $87.96 USD<br>Auto-charged May 8 to ****8197<br>Host: Kevin Tran · Free cancel 24h prior</div>
+    <div class="bk-title">Airport Shuttle — Fly Shuttle &amp; Tours</div>
+    <div class="bk-detail">May 10 · Departs HNL <strong>9:00 PM</strong> → Waikiki<br>4 Adults + 1 Infant · $87.96 USD<br>Auto-charged May 8 to ****8197<br>Host: Kevin Tran · Free cancel 24h prior</div>
     <div class="bk-conf">Conf: #1746120339</div>
-    <a href="https://www.viator.com" target="_blank">→ Viator Booking</a>
+    <div class="bk-links"><a href="https://www.viator.com" target="_blank">→ Viator Booking</a></div>
   </div>
 
-  <div class="booking-card confirmed">
+  <div class="bk-card confirmed">
     <div class="bk-icon">🚙</div>
     <div class="bk-title">Turo — Jun's Jeep Wrangler 2024</div>
-    <div class="bk-detail">Pickup: May 11 at 1:00 PM<br>Return: May 14 at 1:00 PM<br>1810 Kapiolani Blvd, Honolulu<br>600 miles included · $351.55 auto-charged May 4<br>Host: Jun Lan · 📞 909-979-7672</div>
+    <div class="bk-detail">Pickup: May 11 at <strong>1:00 PM</strong><br>Return: May 14 at <strong>1:00 PM</strong> (HARD DEADLINE)<br>1810 Kapiolani Blvd, Honolulu<br>600 miles included · $351.55 auto-charged May 4<br>Host: Jun Lan · 📞 909-979-7672</div>
     <div class="bk-conf">Booked Dec 22, 2025</div>
-    <a href="https://turo.com" target="_blank">→ Turo.com</a> &nbsp;·&nbsp;
-    <a href="https://maps.google.com/?q=1810+Kapiolani+Blvd+Honolulu+HI" target="_blank">→ Maps</a>
+    <div class="bk-links">
+      <a href="https://turo.com" target="_blank">→ Turo.com</a>
+      <a href="https://maps.google.com/?q=1810+Kapiolani+Blvd+Honolulu+HI" target="_blank">→ Maps</a>
+    </div>
   </div>
 
-  <div class="booking-card alert">
+  <div class="bk-card alert">
     <div class="bk-icon">🐠</div>
-    <div class="bk-title">Hanauma Bay — BOOK MAY 12</div>
-    <div class="bk-detail">Visit: Thu May 14 · Arrive 6:45 AM HST<br>Book opens: <strong>Tue May 12 at 10:00 AM PDT</strong><br>4 Adults + 1 Infant (Misha is FREE) · ~$102 USD<br>⚠️ Sells out in under 5 minutes — set your alarm!</div>
+    <div class="bk-title">Hanauma Bay — BOOK MAY 12 at 10 AM PDT</div>
+    <div class="bk-detail">Visit: Thu May 14 · Arrive <strong>6:45 AM HST</strong><br>Book opens: <strong>Tue May 12 at 10:00 AM PDT SHARP</strong><br>4 Adults + 1 Infant (Misha FREE) · ~$102 USD<br>⚠️ Sells out in under 5 minutes — SET YOUR ALARM</div>
     <div class="bk-conf">Calendar reminder set ✅</div>
-    <a href="https://pros.hnl.info/hanauma-bay" target="_blank">→ Book Here at pros.hnl.info</a>
+    <div class="bk-links"><a href="https://pros.hnl.info/hanauma-bay" target="_blank">→ Book at pros.hnl.info</a></div>
   </div>
 
 </div>
+</div>
+</div>
 
-<!-- DAY BY DAY -->
+<!-- ═══════════════ SCHEDULE TAB ═══════════════ -->
+<div class="tab-panel" id="tab-schedule">
 <div class="section-title">📅 Day-by-Day Itinerary</div>
-<div class="days-container">
+<div class="days-wrap">
 
-  <!-- DAY 1 -->
-  <div class="day-card">
-    <div class="day-header">
-      <div class="day-num">1</div>
-      <div class="day-info">
-        <div class="day-date">Sunday, May 10</div>
-        <div class="day-title">✈️ Arrival Night</div>
-        <div class="day-tags">
-          <span class="tag important">Late Arrival</span>
-        </div>
-      </div>
-    </div>
-    <div class="agenda">
-      <div class="agenda-row">
-        <div class="agenda-time">5:40 PM PDT</div>
-        <div class="agenda-icon">✈️</div>
-        <div class="agenda-content">
-          <div class="agenda-main">Depart YVR — AC519</div>
-          <div class="agenda-note">Gleb/Zoe/Misha depart 17:40 (seats 12F/12E) · Andrei/Larissa depart 17:20</div>
-        </div>
-      </div>
-      <div class="agenda-row">
-        <div class="agenda-time">8:45 PM HST</div>
-        <div class="agenda-icon">🛬</div>
-        <div class="agenda-content">
-          <div class="agenda-main">Land at HNL — Daniel K. Inouye Airport</div>
-          <div class="agenda-note">Both groups land ~8:40–8:50 PM · Clear customs · Collect bags · Meet at shuttle terminal</div>
-        </div>
-      </div>
-      <div class="agenda-row">
-        <div class="agenda-time">9:00 PM</div>
-        <div class="agenda-icon">🚐</div>
-        <div class="agenda-content">
-          <div class="agenda-main"><a href="https://www.viator.com" target="_blank">Fly Shuttle & Tours departs HNL</a></div>
-          <div class="agenda-note">Meet Kevin Tran at shuttle terminal · Conf #1746120339 · All 5 together</div>
-        </div>
-      </div>
-      <div class="agenda-row">
-        <div class="agenda-time">9:45 PM</div>
-        <div class="agenda-icon">🏨</div>
-        <div class="agenda-content">
-          <div class="agenda-main"><a href="https://maps.google.com/?q=Grand+Waikikian+Hilton+1811+Ala+Moana+Blvd+Honolulu" target="_blank">Check into Grand Waikikian</a></div>
-          <div class="agenda-note">1811 Ala Moana Blvd · Res #985178033 · 2BR Unit · Arrival Lounge on 8th floor if needed · Get everyone settled</div>
-        </div>
-      </div>
-      <div class="agenda-row">
-        <div class="agenda-time">10:30 PM</div>
-        <div class="agenda-icon">😴</div>
-        <div class="agenda-content">
-          <div class="agenda-main">Misha to sleep — way past bedtime!</div>
-          <div class="agenda-note">Pre-order DoorDash / Instacart before flying so basics are waiting · No activities tonight</div>
-        </div>
-      </div>
+<!-- ─── DAY 1 ─── -->
+<div class="day-card">
+  <div class="day-header">
+    <div class="day-num">1</div>
+    <div class="day-info">
+      <div class="day-date">Sunday, May 10</div>
+      <div class="day-title">✈️ Arrival Night</div>
+      <div class="day-tags"><span class="tag alert">Late Arrival</span></div>
     </div>
   </div>
-
-  <!-- DAY 2 -->
-  <div class="day-card">
-    <div class="day-header">
-      <div class="day-num">2</div>
-      <div class="day-info">
-        <div class="day-date">Monday, May 11</div>
-        <div class="day-title">🛒 Costco Run + Ala Moana Beach + Date Night #1</div>
-        <div class="day-tags">
-          <span class="tag jeep">🚙 Jeep Day 1</span>
-          <span class="tag beach">🏖️ Beach</span>
-          <span class="tag date">💜 Date Night</span>
-          <span class="tag nap">💤 Car Nap</span>
-        </div>
-      </div>
+  <div class="agenda">
+    <div class="agenda-row">
+      <div class="agenda-time">5:20 PM PDT</div><div class="agenda-icon">✈️</div>
+      <div class="agenda-content"><div class="agenda-main">Andrei &amp; Larissa depart YVR — AC519</div><div class="agenda-note">Ref: C898G4 · Seats Economy G</div></div>
     </div>
-    <div class="agenda">
-      <div class="agenda-row">
-        <div class="agenda-time">6:00 AM</div>
-        <div class="agenda-icon">☀️</div>
-        <div class="agenda-content">
-          <div class="agenda-main">Misha up — golden morning on Waikiki</div>
-          <div class="agenda-note">Coffees from hotel, early stroll on the strip · Best time of day — nearly empty beach</div>
-        </div>
-      </div>
-      <div class="agenda-row">
-        <div class="agenda-time">8:00 AM</div>
-        <div class="agenda-icon">🏊</div>
-        <div class="agenda-content">
-          <div class="agenda-main">Hotel pool + Waikiki Beach with grandparents</div>
-          <div class="agenda-note">Misha's first real look at the ocean · Grandparents get oriented</div>
-        </div>
-      </div>
-      <div class="agenda-row">
-        <div class="agenda-time">1:00 PM</div>
-        <div class="agenda-icon">🚙</div>
-        <div class="agenda-content">
-          <div class="agenda-main"><a href="https://maps.google.com/?q=1810+Kapiolani+Blvd+Honolulu+HI" target="_blank">Jeep Wrangler pickup — 1810 Kapiolani Blvd</a></div>
-          <div class="agenda-note">Jun Lan · 📞 909-979-7672 · Conf booked Dec 22 · 600 miles included</div>
-        </div>
-      </div>
-      <div class="agenda-row">
-        <div class="agenda-time">1:30 PM</div>
-        <div class="agenda-icon">🛒</div>
-        <div class="agenda-content">
-          <div class="agenda-main"><a href="https://maps.google.com/?q=Costco+Iwilei+525+Alakawa+St+Honolulu" target="_blank">Costco Iwilei — 525 Alakawa St</a></div>
-          <div class="agenda-note">Stock the 2BR kitchen: proteins, breakfast, fruit, Misha food, beer/wine, sunscreen (huge savings vs. Waikiki) · Misha in the cart</div>
-        </div>
-      </div>
-      <div class="agenda-row agenda-nap">
-        <div class="agenda-time">~2:15 PM</div>
-        <div class="agenda-icon">💤</div>
-        <div class="agenda-content">
-          <div class="agenda-main">🚗 NAP — Car nap on drive Costco → hotel</div>
-          <div class="agenda-note">Do a loop around the block if needed to extend. Transfer sleeping Misha to stroller/crib on arrival.</div>
-        </div>
-      </div>
-      <div class="agenda-row">
-        <div class="agenda-time">3:30 PM</div>
-        <div class="agenda-icon">🏖️</div>
-        <div class="agenda-content">
-          <div class="agenda-main"><a href="https://maps.google.com/?q=Ala+Moana+Beach+Park+Honolulu" target="_blank">Ala Moana Beach Park</a></div>
-          <div class="agenda-note">Reef-protected lagoon · Zero waves · Lifeguards · Shade trees · Perfect for Misha + grandparents</div>
-        </div>
-      </div>
-      <div class="agenda-row">
-        <div class="agenda-time">5:30 PM</div>
-        <div class="agenda-icon">🐟</div>
-        <div class="agenda-content">
-          <div class="agenda-main"><a href="https://foodland.com/about-foodland-farms-ala-moana/" target="_blank">Poke from Foodland Farms Ala Moana</a></div>
-          <div class="agenda-note">1450 Ala Moana Blvd · Freshest poke counter on the island · Grab dinner on the way back</div>
-        </div>
-      </div>
-      <div class="agenda-row">
-        <div class="agenda-time">6:00 PM</div>
-        <div class="agenda-icon">🍳</div>
-        <div class="agenda-content">
-          <div class="agenda-main">Dinner at home — 2BR unit</div>
-          <div class="agenda-note">Cook with Costco haul · Family first night dinner together</div>
-        </div>
-      </div>
-      <div class="agenda-row">
-        <div class="agenda-time">7:30 PM</div>
-        <div class="agenda-icon">😴</div>
-        <div class="agenda-content">
-          <div class="agenda-main">Misha to sleep → Grandparents on duty</div>
-        </div>
-      </div>
-      <div class="agenda-row agenda-datenight">
-        <div class="agenda-time">8:00 PM</div>
-        <div class="agenda-icon">🍹</div>
-        <div class="agenda-content">
-          <div class="agenda-main">🌙 DATE NIGHT #1 — Gleb & Zoe</div>
-          <div class="options-block">
-            <div class="options-title">Choose your vibe:</div>
-            <div class="option-row">
-              <span class="option-label">OPT A</span>
-              <div class="option-text"><strong>Beach Romance:</strong> <a href="https://maps.google.com/?q=Mai+Tai+Bar+Royal+Hawaiian+Waikiki" target="_blank">Mai Tai Bar at Royal Hawaiian</a> (original birthplace of the Mai Tai, oceanfront) → <a href="https://maps.google.com/?q=Dukes+Waikiki+2335+Kalakaua+Ave" target="_blank">Duke's Waikiki</a> for round 2</div>
-            </div>
-            <div class="option-row">
-              <span class="option-label">OPT B</span>
-              <div class="option-text"><strong>Craft Cocktail:</strong> <a href="https://maps.google.com/?q=Bar+Leather+Apron+745+Fort+St+Honolulu" target="_blank">Bar Leather Apron</a> (Honolulu's best cocktail bar, intimate & sophisticated) → <a href="https://www.skullandcrowntrading.com" target="_blank">Skull & Crown Trading Co.</a> in Chinatown (legendary tiki bar · Tue–Sat 5–11 PM)</div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="agenda-row">
+      <div class="agenda-time">5:40 PM PDT</div><div class="agenda-icon">✈️</div>
+      <div class="agenda-content"><div class="agenda-main">Gleb, Zoe &amp; Misha depart YVR — AC519</div><div class="agenda-note">Ref: A5YSL2 · Seats 12F / 12E · Economy Comfort</div></div>
     </div>
-  </div>
-
-  <!-- DAY 3 -->
-  <div class="day-card">
-    <div class="day-header">
-      <div class="day-num">3</div>
-      <div class="day-info">
-        <div class="day-date">Tuesday, May 12</div>
-        <div class="day-title">🌿 North Shore — Dole · Turtles · Giovanni's</div>
-        <div class="day-tags">
-          <span class="tag jeep">🚙 Jeep Day 2</span>
-          <span class="tag important">⏰ Book Hanauma 10AM</span>
-          <span class="tag nap">💤 Car Nap Home</span>
-        </div>
-      </div>
+    <div class="agenda-row">
+      <div class="agenda-time">8:45 PM HST</div><div class="agenda-icon">🛬</div>
+      <div class="agenda-content"><div class="agenda-main">Land at HNL — Daniel K. Inouye Airport</div><div class="agenda-note">Both groups land ~8:40–8:50 PM · Clear customs · Collect bags · Meet at shuttle terminal</div></div>
     </div>
-    <div class="agenda">
-      <div class="agenda-row">
-        <div class="agenda-time">6:00 AM</div>
-        <div class="agenda-icon">🌅</div>
-        <div class="agenda-content">
-          <div class="agenda-main">Misha up — pack cooler, load the Jeep</div>
-          <div class="agenda-note">Costco snacks, water, sunscreen, hats · Leave early to beat crowds at every stop</div>
-        </div>
-      </div>
-      <div class="agenda-row">
-        <div class="agenda-time">6:30 AM</div>
-        <div class="agenda-icon">🚙</div>
-        <div class="agenda-content">
-          <div class="agenda-main">Depart for North Shore (1.5 hrs)</div>
-          <div class="agenda-note">Route: H-1 W → H-2 N → Kamehameha Hwy · Misha happy in the Jeep as the sun rises</div>
-        </div>
-      </div>
-      <div class="agenda-row">
-        <div class="agenda-time">8:00 AM</div>
-        <div class="agenda-icon">🍍</div>
-        <div class="agenda-content">
-          <div class="agenda-main"><a href="https://www.doleplantation.com" target="_blank">Dole Plantation</a></div>
-          <div class="agenda-note"><a href="https://maps.google.com/?q=Dole+Plantation+64-1550+Kamehameha+Hwy+Wahiawa" target="_blank">64-1550 Kamehameha Hwy</a> · Open 9:30 AM · Pineapple Express train · Garden maze · Famous Dole Whip — Misha's first frozen treat moment · Allow 60 min</div>
-        </div>
-      </div>
-      <div class="agenda-row agenda-alert">
-        <div class="agenda-time">9:55 AM</div>
-        <div class="agenda-icon">⏰</div>
-        <div class="agenda-content">
-          <div class="agenda-main">🚨 HANAUMA BAY BOOKING — Opens at 10:00 AM PDT SHARP</div>
-          <div class="agenda-note">Pull over or have Zoe on phone · Book at <a href="https://pros.hnl.info/hanauma-bay" target="_blank">pros.hnl.info/hanauma-bay</a> · 4 adults + 1 infant · Select earliest May 14 slot · Have Mastercard ****8197 ready · Sells out in under 5 min</div>
-        </div>
-      </div>
-      <div class="agenda-row">
-        <div class="agenda-time">10:15 AM</div>
-        <div class="agenda-icon">🐢</div>
-        <div class="agenda-content">
-          <div class="agenda-main"><a href="https://laniakeabeach.com" target="_blank">Laniakea Beach — Turtle Beach</a></div>
-          <div class="agenda-note"><a href="https://maps.google.com/?q=Laniakea+Beach+Turtle+Beach+North+Shore+Oahu" target="_blank">Kamehameha Hwy, Haleiwa</a> · Hawaiian green sea turtles come ashore mid-morning · Misha will lose her mind 🐢 · Stay behind rope · Turtle conservation volunteers on site · Allow 60–75 min</div>
-        </div>
-      </div>
-      <div class="agenda-row">
-        <div class="agenda-time">11:30 AM</div>
-        <div class="agenda-icon">🦐</div>
-        <div class="agenda-content">
-          <div class="agenda-main"><a href="https://maps.google.com/?q=Giovanni%27s+Shrimp+Truck+Kahuku+Oahu" target="_blank">Giovanni's Shrimp Truck</a></div>
-          <div class="agenda-note">Kahuku, North Shore · <a href="https://www.tripadvisor.ca/Restaurant_Review-g60651-d807487-Reviews-Giovanni_s_Shrimp_Truck-Kahuku_Oahu_Hawaii.html" target="_blank">TripAdvisor</a> · The iconic garlic butter scampi plate (12 shrimp + 2 scoops rice) — bucket list meal · Eat at picnic tables in the North Shore breeze</div>
-        </div>
-      </div>
-      <div class="agenda-row">
-        <div class="agenda-time">12:15 PM</div>
-        <div class="agenda-icon">🍧</div>
-        <div class="agenda-content">
-          <div class="agenda-main"><a href="https://matsumotoshaveice.com" target="_blank">Matsumoto's Shave Ice</a> + Hāleʻiwa Stroll</div>
-          <div class="agenda-note"><a href="https://maps.google.com/?q=Matsumoto+Shave+Ice+66-111+Kamehameha+Hwy+Haleiwa" target="_blank">66-111 Kamehameha Hwy, Haleiwa</a> · Open 10 AM–6 PM · Get Li Hing Mui flavour · Walk the surf shops + galleries with Misha</div>
-        </div>
-      </div>
-      <div class="agenda-row agenda-nap">
-        <div class="agenda-time">12:30 PM</div>
-        <div class="agenda-icon">💤</div>
-        <div class="agenda-content">
-          <div class="agenda-main">🚗 NAP — Load Misha, begin 1.5 hr drive back to Honolulu</div>
-          <div class="agenda-note">Best car nap of the whole trip — full belly, tired from turtles and beach · Guaranteed deep sleep on the highway · Arrive home with a refreshed, happy baby</div>
-        </div>
-      </div>
-      <div class="agenda-row">
-        <div class="agenda-time">2:15 PM</div>
-        <div class="agenda-icon">🏨</div>
-        <div class="agenda-content">
-          <div class="agenda-main">Back at hotel — transfer Misha if still sleeping</div>
-          <div class="agenda-note">Hotel pool or lanai for grandparents · Gleb & Zoe decompress</div>
-        </div>
-      </div>
-      <div class="agenda-row">
-        <div class="agenda-time">6:00 PM</div>
-        <div class="agenda-icon">🍳</div>
-        <div class="agenda-content">
-          <div class="agenda-main">Dinner at home — Costco cook</div>
-          <div class="agenda-note">Everyone will be happily exhausted from the big day</div>
-        </div>
-      </div>
+    <div class="agenda-row">
+      <div class="agenda-time">9:00 PM</div><div class="agenda-icon">🚐</div>
+      <div class="agenda-content"><div class="agenda-main"><a href="https://www.viator.com" target="_blank">Fly Shuttle &amp; Tours departs HNL</a></div><div class="agenda-note">Conf #1746120339 · Host Kevin Tran · All 5 together · $87.96 pre-paid</div></div>
     </div>
-  </div>
-
-  <!-- DAY 4 -->
-  <div class="day-card">
-    <div class="day-header">
-      <div class="day-num">4</div>
-      <div class="day-info">
-        <div class="day-date">Wednesday, May 13</div>
-        <div class="day-title">🏝️ Ko Olina Lagoons + Special Dinner</div>
-        <div class="day-tags">
-          <span class="tag jeep">🚙 Jeep Day 3</span>
-          <span class="tag beach">🌊 Lagoons</span>
-          <span class="tag nap">💤 Stroller Nap</span>
-          <span class="tag food">🍽️ Fine Dining</span>
-        </div>
-      </div>
+    <div class="agenda-row">
+      <div class="agenda-time">9:45 PM</div><div class="agenda-icon">🏨</div>
+      <div class="agenda-content"><div class="agenda-main"><a href="https://maps.google.com/?q=Grand+Waikikian+Hilton+1811+Ala+Moana+Blvd+Honolulu" target="_blank">Check into Grand Waikikian</a></div><div class="agenda-note">1811 Ala Moana Blvd · Res #985178033 · 2BR Unit · 8th floor Arrival Lounge if rooms not ready</div></div>
     </div>
-    <div class="agenda">
-      <div class="agenda-row">
-        <div class="agenda-time">6:00 AM</div>
-        <div class="agenda-icon">🌅</div>
-        <div class="agenda-content">
-          <div class="agenda-main">Misha up — pack cooler, load Jeep</div>
-          <div class="agenda-note">Leave early — Ko Olina parking fills up fast in the morning</div>
-        </div>
-      </div>
-      <div class="agenda-row">
-        <div class="agenda-time">6:45 AM</div>
-        <div class="agenda-icon">🚙</div>
-        <div class="agenda-content">
-          <div class="agenda-main">Depart for Ko Olina (~40 min west)</div>
-        </div>
-      </div>
-      <div class="agenda-row">
-        <div class="agenda-time">7:30 AM</div>
-        <div class="agenda-icon">🌊</div>
-        <div class="agenda-content">
-          <div class="agenda-main"><a href="https://maps.google.com/?q=Ko+Olina+Lagoons+Kapolei+Hawaii" target="_blank">Ko Olina Lagoons — Lagoon 1 or 4</a></div>
-          <div class="agenda-note">Four protected man-made coves · Zero waves · Crystal water · Tide pools · Perfect for Misha · Grandparents in the shade · <a href="https://hilittlebird.com/oahu-for-kids/best-oahu-family-beach-koolina/" target="_blank">Full guide here</a> · Gleb & Zoe get one-on-one beach time while grandparents watch Misha</div>
-        </div>
-      </div>
-      <div class="agenda-row">
-        <div class="agenda-time">12:00 PM</div>
-        <div class="agenda-icon">🥪</div>
-        <div class="agenda-content">
-          <div class="agenda-main">Packed Costco lunch at shaded lagoon tables</div>
-        </div>
-      </div>
-      <div class="agenda-row agenda-nap">
-        <div class="agenda-time">12:30 PM</div>
-        <div class="agenda-icon">💤</div>
-        <div class="agenda-content">
-          <div class="agenda-main">🛺 NAP — Stroller walk along Ko Olina beach path</div>
-          <div class="agenda-note">Flat, shaded, beautiful coastal path · Grandparents take turns pushing · Gleb & Zoe get solo beach time · Misha asleep within 10 min of rolling · ~1.5 hr loop</div>
-        </div>
-      </div>
-      <div class="agenda-row">
-        <div class="agenda-time">2:15 PM</div>
-        <div class="agenda-icon">🚙</div>
-        <div class="agenda-content">
-          <div class="agenda-main">Load Jeep, drive back to Honolulu (40 min)</div>
-          <div class="agenda-note">Misha happy post-nap for the drive back</div>
-        </div>
-      </div>
-      <div class="agenda-row">
-        <div class="agenda-time">3:00 PM</div>
-        <div class="agenda-icon">🏊</div>
-        <div class="agenda-content">
-          <div class="agenda-main">Hotel pool / lanai time</div>
-        </div>
-      </div>
-      <div class="agenda-row">
-        <div class="agenda-time">6:30 PM</div>
-        <div class="agenda-icon">🍽️</div>
-        <div class="agenda-content">
-          <div class="agenda-main">Special Family Dinner — book in advance!</div>
-          <div class="options-block">
-            <div class="options-title">Choose your restaurant:</div>
-            <div class="option-row">
-              <span class="option-label">OPT A</span>
-              <div class="option-text"><a href="https://www.stripsteak.com/location/waikiki/" target="_blank">Stripsteak Waikiki</a> (Michael Mina) · International Market Place · <a href="https://www.opentable.com/r/stripsteak-oahu-honolulu" target="_blank">Reserve on OpenTable →</a></div>
-            </div>
-            <div class="option-row">
-              <span class="option-label">OPT B</span>
-              <div class="option-text"><a href="https://noburestaurants.com" target="_blank">Nobu Waikiki</a> · 2233 Helumoa Rd · <a href="https://maps.google.com/?q=Nobu+Waikiki+2233+Helumoa+Rd" target="_blank">Google Maps →</a></div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="agenda-row">
+      <div class="agenda-time">10:30 PM</div><div class="agenda-icon">😴</div>
+      <div class="agenda-content"><div class="agenda-main">Misha to sleep — way past bedtime!</div><div class="agenda-note">Pre-order DoorDash / Instacart basics before flying · No activities tonight · Get settled</div></div>
     </div>
-  </div>
-
-  <!-- DAY 5 -->
-  <div class="day-card">
-    <div class="day-header">
-      <div class="day-num">5</div>
-      <div class="day-info">
-        <div class="day-date">Thursday, May 14</div>
-        <div class="day-title">🐠 Hanauma Bay + Jeep Return</div>
-        <div class="day-tags">
-          <span class="tag important">🔑 Jeep Return 1PM</span>
-          <span class="tag beach">🤿 Snorkel</span>
-          <span class="tag nap">💤 Hotel Crib Nap</span>
-        </div>
-      </div>
-    </div>
-    <div class="agenda">
-      <div class="agenda-row">
-        <div class="agenda-time">5:30 AM</div>
-        <div class="agenda-icon">⏰</div>
-        <div class="agenda-content">
-          <div class="agenda-main">Early wake-up — Misha will be up anyway!</div>
-          <div class="agenda-note">Load car in the dark · Pack snorkel gear, beach shade tent, snacks · $3 cash for parking</div>
-        </div>
-      </div>
-      <div class="agenda-row">
-        <div class="agenda-time">6:15 AM</div>
-        <div class="agenda-icon">🚙</div>
-        <div class="agenda-content">
-          <div class="agenda-main">Drive to Hanauma Bay (~25 min)</div>
-          <div class="agenda-note"><a href="https://maps.google.com/?q=Hanauma+Bay+Nature+Preserve+Honolulu" target="_blank">100 Hanauma Bay Rd</a></div>
-        </div>
-      </div>
-      <div class="agenda-row">
-        <div class="agenda-time">6:45 AM</div>
-        <div class="agenda-icon">🐠</div>
-        <div class="agenda-content">
-          <div class="agenda-main"><a href="https://pros.hnl.info/hanauma-bay" target="_blank">Hanauma Bay Nature Preserve opens</a></div>
-          <div class="agenda-note">Show QR code tickets · Watch mandatory reef education video (~20 min) · Grandparents + Misha in the sand shallows · Gleb & Zoe snorkel the inner reef · Reef-safe sunscreen required · <a href="https://www.honolulu.gov/dpr/hanauma-bay-nature-preserve/" target="_blank">Park info</a></div>
-        </div>
-      </div>
-      <div class="agenda-row">
-        <div class="agenda-time">11:00 AM</div>
-        <div class="agenda-icon">🧳</div>
-        <div class="agenda-content">
-          <div class="agenda-main">Pack up and head to parking lot</div>
-          <div class="agenda-note">Allow 20 min drive back + buffer for Jeep return deadline</div>
-        </div>
-      </div>
-      <div class="agenda-row agenda-alert">
-        <div class="agenda-time">1:00 PM</div>
-        <div class="agenda-icon">🔑</div>
-        <div class="agenda-content">
-          <div class="agenda-main">🚨 Return Jeep to Jun — HARD DEADLINE</div>
-          <div class="agenda-note"><a href="https://maps.google.com/?q=1810+Kapiolani+Blvd+Honolulu+HI" target="_blank">1810 Kapiolani Blvd</a> · Jun Lan · 📞 909-979-7672 · Text ahead to confirm</div>
-        </div>
-      </div>
-      <div class="agenda-row agenda-nap">
-        <div class="agenda-time">1:15 PM</div>
-        <div class="agenda-icon">💤</div>
-        <div class="agenda-content">
-          <div class="agenda-main">🏨 NAP — Hotel crib · Best nap of the week</div>
-          <div class="agenda-note">No car today after 1 PM — perfect hotel crib nap · Full 2 hours uninterrupted · Grandparents on watch</div>
-        </div>
-      </div>
-      <div class="agenda-row">
-        <div class="agenda-time">2:30 PM</div>
-        <div class="agenda-icon">🥞</div>
-        <div class="agenda-content">
-          <div class="agenda-main">Brunch — Gleb & Zoe (grandparents with Misha)</div>
-          <div class="options-block">
-            <div class="options-title">Choose:</div>
-            <div class="option-row">
-              <span class="option-label">OPT A</span>
-              <div class="option-text"><a href="https://www.kokoheadcafe.com" target="_blank">Koko Head Café</a> · <a href="https://maps.google.com/?q=Koko+Head+Cafe+1120+12th+Ave+Honolulu" target="_blank">1120 12th Ave</a> · Korean-Hawaiian brunch · <a href="https://www.opentable.com/r/koko-head-cafe-honolulu" target="_blank">Join waitlist on OpenTable →</a></div>
-            </div>
-            <div class="option-row">
-              <span class="option-label">OPT B</span>
-              <div class="option-text"><a href="https://maps.google.com/?q=Rainbow+Drive-In+3308+Kanaina+Ave+Honolulu" target="_blank">Rainbow Drive-In</a> · 3308 Kanaina Ave · Plate lunch institution since 1940 · Loco moco, macaroni salad, two scoops rice</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="agenda-row">
-        <div class="agenda-time">4:00 PM</div>
-        <div class="agenda-icon">🏊</div>
-        <div class="agenda-content">
-          <div class="agenda-main">Hotel pool afternoon — full family</div>
-        </div>
-      </div>
-      <div class="agenda-row">
-        <div class="agenda-time">6:30 PM</div>
-        <div class="agenda-icon">🍳</div>
-        <div class="agenda-content">
-          <div class="agenda-main">Easy dinner at home from Costco</div>
-          <div class="agenda-note">Quiet evening — big fireworks day tomorrow!</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- DAY 6 -->
-  <div class="day-card">
-    <div class="day-header">
-      <div class="day-num">6</div>
-      <div class="day-info">
-        <div class="day-date">Friday, May 15</div>
-        <div class="day-title">🎆 Waikiki Day + Friday Fireworks + Date Night #2</div>
-        <div class="day-tags">
-          <span class="tag fireworks">🎆 Fireworks Night</span>
-          <span class="tag date">💜 Date Night</span>
-          <span class="tag nap">💤 Stroller Nap</span>
-        </div>
-      </div>
-    </div>
-    <div class="agenda">
-      <div class="agenda-row">
-        <div class="agenda-time">6:00 AM</div>
-        <div class="agenda-icon">🌊</div>
-        <div class="agenda-content">
-          <div class="agenda-main">Early Waikiki Beach walk</div>
-          <div class="agenda-note">Golden hour, near-empty sand · Misha loves the water at this time · Best photos of the trip</div>
-        </div>
-      </div>
-      <div class="agenda-row">
-        <div class="agenda-time">8:30 AM</div>
-        <div class="agenda-icon">🍩</div>
-        <div class="agenda-content">
-          <div class="agenda-main"><a href="https://leonardshawaii.com/locations/" target="_blank">Leonard's Bakery — Malasadas</a></div>
-          <div class="agenda-note"><a href="https://maps.google.com/?q=Leonard%27s+Bakery+933+Kapahulu+Ave+Honolulu" target="_blank">933 Kapahulu Ave</a> · Open 5:30 AM · Uber ride ~10 min · Lines out the door but moves fast · Get Original + Cinnamon Sugar · Non-negotiable Hawaii stop</div>
-        </div>
-      </div>
-      <div class="agenda-row">
-        <div class="agenda-time">10:00 AM</div>
-        <div class="agenda-icon">🛍️</div>
-        <div class="agenda-content">
-          <div class="agenda-main"><a href="https://maps.google.com/?q=Ala+Moana+Center+1450+Ala+Moana+Blvd+Honolulu" target="_blank">Ala Moana Shopping Center</a></div>
-          <div class="agenda-note">World's largest open-air mall · 5 min walk from hotel · Hawaii gifts, souvenirs, kids stuff for Misha</div>
-        </div>
-      </div>
-      <div class="agenda-row">
-        <div class="agenda-time">12:00 PM</div>
-        <div class="agenda-icon">🐟</div>
-        <div class="agenda-content">
-          <div class="agenda-main"><a href="https://foodland.com/about-foodland-farms-ala-moana/" target="_blank">Poke lunch — Foodland Farms</a></div>
-          <div class="agenda-note">1450 Ala Moana Blvd · Eat on the Ala Moana beach lawn</div>
-        </div>
-      </div>
-      <div class="agenda-row agenda-nap">
-        <div class="agenda-time">12:30 PM</div>
-        <div class="agenda-icon">💤</div>
-        <div class="agenda-content">
-          <div class="agenda-main">🛺 NAP — Stroller walk: Ala Moana beach path → Magic Island loop</div>
-          <div class="agenda-note">Flat, shaded, beautiful coastal route · Misha asleep in minutes · ~1.5 hr loop · Grandparents take turns · Gleb & Zoe get quiet time on the grass</div>
-        </div>
-      </div>
-      <div class="agenda-row">
-        <div class="agenda-time">2:30 PM</div>
-        <div class="agenda-icon">🏊</div>
-        <div class="agenda-content">
-          <div class="agenda-main">Hotel pool — grandparents take over</div>
-        </div>
-      </div>
-      <div class="agenda-row">
-        <div class="agenda-time">6:00 PM</div>
-        <div class="agenda-icon">🍳</div>
-        <div class="agenda-content">
-          <div class="agenda-main">Early family dinner at home</div>
-          <div class="agenda-note">Get everyone fed and settled before fireworks</div>
-        </div>
-      </div>
-      <div class="agenda-row">
-        <div class="agenda-time">7:45 PM</div>
-        <div class="agenda-icon">🎆</div>
-        <div class="agenda-content">
-          <div class="agenda-main">Friday Night Fireworks — Hilton Hawaiian Village</div>
-          <div class="agenda-note">RIGHT at your hotel beach! · Whole family including Misha · Grab a spot on the beach or watch from your lanai · Weather permitting — weekly every Friday</div>
-        </div>
-      </div>
-      <div class="agenda-row">
-        <div class="agenda-time">8:30 PM</div>
-        <div class="agenda-icon">😴</div>
-        <div class="agenda-content">
-          <div class="agenda-main">Misha to sleep → Grandparents on duty</div>
-        </div>
-      </div>
-      <div class="agenda-row agenda-datenight">
-        <div class="agenda-time">9:00 PM</div>
-        <div class="agenda-icon">🍹</div>
-        <div class="agenda-content">
-          <div class="agenda-main">🌙 DATE NIGHT #2 — Gleb & Zoe</div>
-          <div class="options-block">
-            <div class="options-title">Choose your vibe:</div>
-            <div class="option-row">
-              <span class="option-label">OPT A</span>
-              <div class="option-text"><strong>Rooftop Views:</strong> <a href="https://skywaikiki.com" target="_blank">SKY Waikiki</a> — 19th floor panoramic bar, Diamond Head views, DJ, handcrafted cocktails · <a href="https://www.opentable.com/r/sky-waikiki-raw-bar-honolulu" target="_blank">Reserve on OpenTable →</a></div>
-            </div>
-            <div class="option-row">
-              <span class="option-label">OPT B</span>
-              <div class="option-text"><strong>Iconic & Elegant:</strong> <a href="https://www.halekulani.com/dining/house-without-a-key/" target="_blank">House Without a Key</a> (Halekulani · open-air oceanfront · live Hawaiian music) → <a href="https://maps.google.com/?q=Lewers+Lounge+Halekulani+Honolulu" target="_blank">Lewers Lounge</a> (intimate jazz cocktail bar steps away)</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- DAY 7 -->
-  <div class="day-card">
-    <div class="day-header">
-      <div class="day-num">7</div>
-      <div class="day-info">
-        <div class="day-date">Saturday, May 16</div>
-        <div class="day-title">🏖️ Kailua Beach + Farewell Dinner</div>
-        <div class="day-tags">
-          <span class="tag beach">🌊 Kailua</span>
-          <span class="tag nap">💤 Uber Nap Home</span>
-          <span class="tag food">🥂 Farewell Dinner</span>
-        </div>
-      </div>
-    </div>
-    <div class="agenda">
-      <div class="agenda-row">
-        <div class="agenda-time">6:00 AM</div>
-        <div class="agenda-icon">☀️</div>
-        <div class="agenda-content">
-          <div class="agenda-main">Final Waikiki morning walk + coffees</div>
-        </div>
-      </div>
-      <div class="agenda-row">
-        <div class="agenda-time">8:00 AM</div>
-        <div class="agenda-icon">🚘</div>
-        <div class="agenda-content">
-          <div class="agenda-main">Uber to Kailua Beach (~35 min)</div>
-          <div class="agenda-note">Head over before crowds arrive</div>
-        </div>
-      </div>
-      <div class="agenda-row">
-        <div class="agenda-time">8:45 AM</div>
-        <div class="agenda-icon">🌊</div>
-        <div class="agenda-content">
-          <div class="agenda-main"><a href="https://maps.google.com/?q=Kailua+Beach+Park+Oahu+Hawaii" target="_blank">Kailua Beach Park</a></div>
-          <div class="agenda-note">One of Oahu's most beautiful beaches · Powder-white sand · Gentle turquoise surf · Misha's favourite water conditions of the trip · Great photos here</div>
-        </div>
-      </div>
-      <div class="agenda-row">
-        <div class="agenda-time">12:00 PM</div>
-        <div class="agenda-icon">🥗</div>
-        <div class="agenda-content">
-          <div class="agenda-main"><a href="https://kalapawaimarket.com/kailua-town/" target="_blank">Lunch at Kalapawai Café</a></div>
-          <div class="agenda-note"><a href="https://maps.google.com/?q=Kalapawai+Cafe+750+Kailua+Rd+Kailua" target="_blank">750 Kailua Rd, Kailua</a> · Open from 7 AM · Local favourite · Great sandwiches and salads</div>
-        </div>
-      </div>
-      <div class="agenda-row agenda-nap">
-        <div class="agenda-time">12:45 PM</div>
-        <div class="agenda-icon">💤</div>
-        <div class="agenda-content">
-          <div class="agenda-main">🚘 NAP — Uber home (~35 min) · Perfect timing</div>
-          <div class="agenda-note">Time the Uber to coincide exactly with nap window · Misha sleeps the whole ride · Transfer to hotel on arrival</div>
-        </div>
-      </div>
-      <div class="agenda-row">
-        <div class="agenda-time">1:30 PM</div>
-        <div class="agenda-icon">🧳</div>
-        <div class="agenda-content">
-          <div class="agenda-main">Grandparents with sleeping Misha · Pack up souvenirs</div>
-          <div class="agenda-note">Gleb & Zoe — last pool dip, start soft packing</div>
-        </div>
-      </div>
-      <div class="agenda-row">
-        <div class="agenda-time">6:00 PM</div>
-        <div class="agenda-icon">🥂</div>
-        <div class="agenda-content">
-          <div class="agenda-main">Farewell Family Dinner — book in advance!</div>
-          <div class="options-block">
-            <div class="options-title">Choose your restaurant:</div>
-            <div class="option-row">
-              <span class="option-label">OPT A</span>
-              <div class="option-text"><a href="https://www.halekulani.com/dining/orchids/" target="_blank">Orchids at Halekulani</a> · AAA Five Diamond · oceanfront · Hawaii's finest · <a href="https://maps.google.com/?q=Orchids+Restaurant+Halekulani+2199+Kalia+Rd+Honolulu" target="_blank">2199 Kalia Rd</a> · 📞 808-518-2019</div>
-            </div>
-            <div class="option-row">
-              <span class="option-label">OPT B</span>
-              <div class="option-text">Taormina Sicilian Cuisine · Outstanding pasta + seafood · More relaxed family feel · <a href="https://maps.google.com/?q=Taormina+Sicilian+Cuisine+Waikiki+Honolulu" target="_blank">Google Maps →</a></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- DAY 8 -->
-  <div class="day-card">
-    <div class="day-header">
-      <div class="day-num">8</div>
-      <div class="day-info">
-        <div class="day-date">Sunday, May 17</div>
-        <div class="day-title">✈️ Departure Day</div>
-        <div class="day-tags">
-          <span class="tag nap">🛺 Last Stroller Nap</span>
-          <span class="tag important">✈️ Late Flights</span>
-        </div>
-      </div>
-    </div>
-    <div class="agenda">
-      <div class="agenda-row">
-        <div class="agenda-time">6:00 AM</div>
-        <div class="agenda-icon">🌅</div>
-        <div class="agenda-content">
-          <div class="agenda-main">Last sunrise beach run</div>
-          <div class="agenda-note">Gleb — final solo run on the Waikiki strip · Zoe & Misha — last beach walk</div>
-        </div>
-      </div>
-      <div class="agenda-row">
-        <div class="agenda-time">8:00 AM</div>
-        <div class="agenda-icon">🧳</div>
-        <div class="agenda-content">
-          <div class="agenda-main">Final packing</div>
-        </div>
-      </div>
-      <div class="agenda-row">
-        <div class="agenda-time">10:00 AM</div>
-        <div class="agenda-icon">🏨</div>
-        <div class="agenda-content">
-          <div class="agenda-main">Hotel check-out</div>
-          <div class="agenda-note">Store bags in 8th floor Arrival Lounge (open 8 AM–6 PM) · Check-out deadline: 10 AM</div>
-        </div>
-      </div>
-      <div class="agenda-row">
-        <div class="agenda-time">11:00 AM</div>
-        <div class="agenda-icon">🏖️</div>
-        <div class="agenda-content">
-          <div class="agenda-main">Last Waikiki stroll + lunch</div>
-          <div class="agenda-note">Eggs 'n Things or beachside café · Soak in the last hours</div>
-        </div>
-      </div>
-      <div class="agenda-row agenda-nap">
-        <div class="agenda-time">12:30 PM</div>
-        <div class="agenda-icon">💤</div>
-        <div class="agenda-content">
-          <div class="agenda-main">🛺 NAP — Final stroller walk through Waikiki</div>
-          <div class="agenda-note">Misha naps · You enjoy the last hour in paradise · Walk toward Ala Wai canal path</div>
-        </div>
-      </div>
-      <div class="agenda-row">
-        <div class="agenda-time">2:30 PM</div>
-        <div class="agenda-icon">🍩</div>
-        <div class="agenda-content">
-          <div class="agenda-main"><a href="https://leonardshawaii.com/locations/" target="_blank">Leonard's Airport Location — One Last Malasada</a></div>
-          <div class="agenda-note"><a href="https://maps.google.com/?q=Leonard%27s+Bakery+540+Lagoon+Dr+Honolulu" target="_blank">540 Lagoon Dr</a> · On the way to HNL — perfect final Hawaii bite</div>
-        </div>
-      </div>
-      <div class="agenda-row">
-        <div class="agenda-time">3:00 PM</div>
-        <div class="agenda-icon">🚘</div>
-        <div class="agenda-content">
-          <div class="agenda-main">Uber to HNL — Daniel K. Inouye Airport</div>
-          <div class="agenda-note">Allow 45 min + check-in time · Both groups head to airport together</div>
-        </div>
-      </div>
-      <div class="agenda-row">
-        <div class="agenda-time">3:45 PM</div>
-        <div class="agenda-icon">🛫</div>
-        <div class="agenda-content">
-          <div class="agenda-main">Airport check-in, bags, security · Dinner at HNL</div>
-        </div>
-      </div>
-      <div class="agenda-row">
-        <div class="agenda-time">9:55 PM</div>
-        <div class="agenda-icon">✈️</div>
-        <div class="agenda-content">
-          <div class="agenda-main">Andrei & Larissa depart — AC518 (21:55)</div>
-          <div class="agenda-note">Ref: C898G4 · Arrives YVR 06:53+1</div>
-        </div>
-      </div>
-      <div class="agenda-row">
-        <div class="agenda-time">10:05 PM</div>
-        <div class="agenda-icon">✈️</div>
-        <div class="agenda-content">
-          <div class="agenda-main">Gleb, Zoe & Misha depart — AC518 (22:05)</div>
-          <div class="agenda-note">Ref: A5YSL2 · Arrives YVR 07:00+1 · Aloha 🌺</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-<!-- FOOD GUIDE -->
-<div class="section-title">🍽️ Must-Eat Food Guide</div>
-<div class="food-grid">
-  <div class="food-card">
-    <div class="food-icon">🐟</div>
-    <div class="food-name">Poke Bowl</div>
-    <div class="food-where"><a href="https://foodland.com/about-foodland-farms-ala-moana/" target="_blank">Foodland Farms Ala Moana</a></div>
-    <div class="food-day">Days 2 & 6</div>
-  </div>
-  <div class="food-card">
-    <div class="food-icon">🦐</div>
-    <div class="food-name">Garlic Shrimp Scampi</div>
-    <div class="food-where"><a href="https://maps.google.com/?q=Giovanni%27s+Shrimp+Truck+Kahuku+Oahu" target="_blank">Giovanni's Shrimp Truck</a></div>
-    <div class="food-day">Day 3 — North Shore</div>
-  </div>
-  <div class="food-card">
-    <div class="food-icon">🍧</div>
-    <div class="food-name">Shave Ice</div>
-    <div class="food-where"><a href="https://matsumotoshaveice.com" target="_blank">Matsumoto's, Hāleʻiwa</a></div>
-    <div class="food-day">Day 3 — North Shore</div>
-  </div>
-  <div class="food-card">
-    <div class="food-icon">🍍</div>
-    <div class="food-name">Dole Whip</div>
-    <div class="food-where"><a href="https://www.doleplantation.com" target="_blank">Dole Plantation</a></div>
-    <div class="food-day">Day 3 — Morning</div>
-  </div>
-  <div class="food-card">
-    <div class="food-icon">🥞</div>
-    <div class="food-name">Korean-Hawaiian Brunch</div>
-    <div class="food-where"><a href="https://www.kokoheadcafe.com" target="_blank">Koko Head Café</a></div>
-    <div class="food-day">Day 5 — Afternoon</div>
-  </div>
-  <div class="food-card">
-    <div class="food-icon">🍱</div>
-    <div class="food-name">Plate Lunch / Loco Moco</div>
-    <div class="food-where"><a href="https://maps.google.com/?q=Rainbow+Drive-In+3308+Kanaina+Ave+Honolulu" target="_blank">Rainbow Drive-In</a></div>
-    <div class="food-day">Day 5 — Alt brunch</div>
-  </div>
-  <div class="food-card">
-    <div class="food-icon">🍩</div>
-    <div class="food-name">Malasadas</div>
-    <div class="food-where"><a href="https://leonardshawaii.com/locations/" target="_blank">Leonard's Bakery</a></div>
-    <div class="food-day">Days 6 & 8</div>
-  </div>
-  <div class="food-card">
-    <div class="food-icon">🥩</div>
-    <div class="food-name">Fine Dining Dinner</div>
-    <div class="food-where"><a href="https://www.stripsteak.com/location/waikiki/" target="_blank">Stripsteak</a> or <a href="https://noburestaurants.com" target="_blank">Nobu Waikiki</a></div>
-    <div class="food-day">Day 4 — Evening</div>
-  </div>
-  <div class="food-card">
-    <div class="food-icon">🥂</div>
-    <div class="food-name">Farewell Dinner</div>
-    <div class="food-where"><a href="https://www.halekulani.com/dining/orchids/" target="_blank">Orchids at Halekulani</a></div>
-    <div class="food-day">Day 7 — Evening</div>
-  </div>
-  <div class="food-card">
-    <div class="food-icon">🏠</div>
-    <div class="food-name">Home Cooking (x3)</div>
-    <div class="food-where"><a href="https://maps.google.com/?q=Costco+Iwilei+525+Alakawa+St+Honolulu" target="_blank">Costco Iwilei groceries</a></div>
-    <div class="food-day">Days 2, 3 & 5</div>
   </div>
 </div>
 
-<!-- NAP STRATEGY -->
-<div class="section-title">💤 Misha's Nap Strategy (12:30–2:30 PM)</div>
-<div class="nap-table">
-  <table>
-    <tr>
-      <th>Day</th>
-      <th>Date</th>
-      <th>Nap Method</th>
-      <th>How</th>
-    </tr>
-    <tr>
-      <td><strong>Day 2</strong></td>
-      <td>Mon May 11</td>
-      <td><span class="nap-type">🚗 Car Nap</span></td>
-      <td>Drive Costco → hotel · Loop the block if needed to extend</td>
-    </tr>
-    <tr>
-      <td><strong>Day 3</strong></td>
-      <td>Tue May 12</td>
-      <td><span class="nap-type">🚗 Car Nap ⭐ Best</span></td>
-      <td>1.5 hr North Shore highway drive home · Full belly + tired from turtles = guaranteed deep sleep</td>
-    </tr>
-    <tr>
-      <td><strong>Day 4</strong></td>
-      <td>Wed May 13</td>
-      <td><span class="nap-type">🛺 Stroller Nap</span></td>
-      <td>Ko Olina shaded beach path · Flat, beautiful coastal route · Grandparents take turns pushing</td>
-    </tr>
-    <tr>
-      <td><strong>Day 5</strong></td>
-      <td>Thu May 14</td>
-      <td><span class="nap-type">🏨 Hotel Crib ⭐ Full</span></td>
-      <td>Home by 1 PM after Jeep return · Best full-length nap of the week · Grandparents on watch</td>
-    </tr>
-    <tr>
-      <td><strong>Day 6</strong></td>
-      <td>Fri May 15</td>
-      <td><span class="nap-type">🛺 Stroller Nap</span></td>
-      <td>Ala Moana beach path → Magic Island loop · Shaded flat path · Misha out in 10 min</td>
-    </tr>
-    <tr>
-      <td><strong>Day 7</strong></td>
-      <td>Sat May 16</td>
-      <td><span class="nap-type">🚘 Uber Nap</span></td>
-      <td>35 min Kailua → Honolulu ride · Time departure perfectly at 12:45 PM · Sleeps whole ride</td>
-    </tr>
-    <tr>
-      <td><strong>Day 8</strong></td>
-      <td>Sun May 17</td>
-      <td><span class="nap-type">🛺 Stroller Nap</span></td>
-      <td>Final Waikiki / Ala Wai canal walk while waiting for airport time</td>
-    </tr>
-  </table>
-</div>
-
-<!-- CHECKLIST -->
-<div class="section-title">✅ Pre-Trip Checklist</div>
-<div class="checklist-section">
-  <div class="checklist-grid">
-    <div class="checklist-card">
-      <h3>🚨 Urgent — Do Now</h3>
-      <div class="checklist-item">
-        <div class="check-box"></div>
-        <div><span class="urgent">Book Hanauma Bay</span> — alarm set for <a href="https://pros.hnl.info/hanauma-bay" target="_blank">Tue May 12 at 10:00 AM PDT</a></div>
-      </div>
-      <div class="checklist-item">
-        <div class="check-box"></div>
-        <div><span class="urgent">Reserve Stripsteak or Nobu</span> for Day 4 dinner — <a href="https://www.opentable.com/r/stripsteak-oahu-honolulu" target="_blank">OpenTable →</a></div>
-      </div>
-      <div class="checklist-item">
-        <div class="check-box"></div>
-        <div><span class="urgent">Book Farewell Dinner</span> (Orchids) — Call <a href="https://www.halekulani.com/dining/orchids/" target="_blank">808-518-2019</a></div>
-      </div>
-      <div class="checklist-item">
-        <div class="check-box"></div>
-        <div><span class="urgent">Reserve SKY Waikiki</span> for Date Night #2 — <a href="https://skywaikiki.com/reservation/" target="_blank">skywaikiki.com →</a></div>
-      </div>
-    </div>
-    <div class="checklist-card">
-      <h3>📋 Before You Fly</h3>
-      <div class="checklist-item">
-        <div class="check-box"></div>
-        <div>Text Jun (909-979-7672) — confirm May 11 1 PM Jeep pickup</div>
-      </div>
-      <div class="checklist-item">
-        <div class="check-box"></div>
-        <div>Save Kevin Tran's shuttle contact for May 10 airport arrival</div>
-      </div>
-      <div class="checklist-item">
-        <div class="check-box"></div>
-        <div><a href="https://www.opentable.com/r/koko-head-cafe-honolulu" target="_blank">Join Koko Head Café waitlist on OpenTable</a></div>
-      </div>
-      <div class="checklist-item">
-        <div class="check-box"></div>
-        <div>Pre-order DoorDash / Instacart for hotel arrival night</div>
-      </div>
-      <div class="checklist-item">
-        <div class="check-box"></div>
-        <div>Download Turo app — have Jun's trip pulled up for pickup</div>
-      </div>
-    </div>
-    <div class="checklist-card">
-      <h3>🎒 Pack for Misha & Beach</h3>
-      <div class="checklist-item">
-        <div class="check-box"></div>
-        <div>Portable beach shade tent (essential for Misha)</div>
-      </div>
-      <div class="checklist-item">
-        <div class="check-box"></div>
-        <div>Reef-safe sunscreen — required at Hanauma Bay</div>
-      </div>
-      <div class="checklist-item">
-        <div class="check-box"></div>
-        <div>Snorkel gear for Gleb & Zoe</div>
-      </div>
-      <div class="checklist-item">
-        <div class="check-box"></div>
-        <div>Misha's stroller — essential for all nap plans</div>
-      </div>
-      <div class="checklist-item">
-        <div class="check-box"></div>
-        <div>$3 cash for Hanauma Bay parking</div>
-      </div>
-      <div class="checklist-item">
-        <div class="check-box"></div>
-        <div>Baby carrier / Ergo for North Shore walks</div>
+<!-- ─── DAY 2 ─── -->
+<div class="day-card">
+  <div class="day-header">
+    <div class="day-num">2</div>
+    <div class="day-info">
+      <div class="day-date">Monday, May 11</div>
+      <div class="day-title">🛒 Costco Run + Ala Moana Beach + Date Night #1</div>
+      <div class="day-tags">
+        <span class="tag jeep">🚙 Jeep Day 1</span>
+        <span class="tag beach">🏖️ Beach</span>
+        <span class="tag nap">💤 Stroller Nap 12:30</span>
+        <span class="tag date">💜 Date Night</span>
       </div>
     </div>
   </div>
+  <div class="agenda">
+    <div class="agenda-row">
+      <div class="agenda-time">6:00 AM</div><div class="agenda-icon">☀️</div>
+      <div class="agenda-content"><div class="agenda-main">Misha up — golden morning on Waikiki</div><div class="agenda-note">Coffees from hotel · Early stroll on the strip · Best time of day — nearly empty beach</div></div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-time">8:00 AM</div><div class="agenda-icon">🏊</div>
+      <div class="agenda-content"><div class="agenda-main">Hotel pool + Waikiki Beach with Baba &amp; Deda</div><div class="agenda-note">Misha's first real look at the ocean · Grandparents get oriented · Best light for photos</div></div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-time">11:30 AM</div><div class="agenda-icon">🚶</div>
+      <div class="agenda-content"><div class="agenda-main">Pack up, head toward Ala Moana area</div><div class="agenda-note">Begin walking toward Jeep pickup location — stroller ready for nap</div></div>
+    </div>
+    <div class="agenda-row row-nap">
+      <div class="agenda-time">12:30 PM</div><div class="agenda-icon">💤</div>
+      <div class="agenda-content">
+        <div class="agenda-main">💤 NAP — Stroller walk along Ala Moana waterfront path</div>
+        <div class="agenda-note">Baba &amp; Deda push Misha along the flat shaded coastal path · Misha asleep within 10 min · Gleb walks 12 min to Jeep pickup at 1 PM · Perfect logistics split</div>
+      </div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-time">1:00 PM</div><div class="agenda-icon">🚙</div>
+      <div class="agenda-content"><div class="agenda-main"><a href="https://maps.google.com/?q=1810+Kapiolani+Blvd+Honolulu+HI" target="_blank">Jeep Wrangler pickup — 1810 Kapiolani Blvd</a></div><div class="agenda-note">Jun Lan · 📞 909-979-7672 · Conf booked Dec 22 · 600 miles included · 2024 Wrangler</div></div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-time">1:30 PM</div><div class="agenda-icon">🛒</div>
+      <div class="agenda-content"><div class="agenda-main"><a href="https://maps.google.com/?q=Costco+Iwilei+525+Alakawa+St+Honolulu" target="_blank">Costco Iwilei — 525 Alakawa St</a></div><div class="agenda-note">Stock 2BR kitchen: proteins, breakfast items, fruit, Misha food, beer/wine, sunscreen — huge savings vs. Waikiki · Misha just woke, perfect timing in the cart</div></div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-time">3:00 PM</div><div class="agenda-icon">🏖️</div>
+      <div class="agenda-content"><div class="agenda-main"><a href="https://maps.google.com/?q=Ala+Moana+Beach+Park+Honolulu" target="_blank">Ala Moana Beach Park</a></div><div class="agenda-note">Reef-protected lagoon · Zero waves · Lifeguards · Shade trees · Perfect for Misha &amp; grandparents</div></div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-time">5:30 PM</div><div class="agenda-icon">🐟</div>
+      <div class="agenda-content">
+        <div class="agenda-main">Dinner pickup — poke on the way home</div>
+        <div class="opts">
+          <div class="opts-title">Choose your poke:</div>
+          <div class="opt-row"><span class="opt-label">OPT A</span><div class="opt-text"><a href="https://foodland.com/about-foodland-farms-ala-moana/" target="_blank">Foodland Farms Ala Moana</a> · 1450 Ala Moana Blvd · Freshest poke counter on island · Multiple varieties</div></div>
+          <div class="opt-row"><span class="opt-label new-rec">NEW</span><div class="opt-text"><strong>Ono Seafood</strong> · Friend rec ⭐ · ORDER: spicy salmon + shoyu ahi poke</div></div>
+          <div class="opt-row"><span class="opt-label new-rec">NEW</span><div class="opt-text"><strong>Poke on Da Run</strong> · Friend rec · ORDER: poke nachos (standout item)</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-time">6:00 PM</div><div class="agenda-icon">🍳</div>
+      <div class="agenda-content"><div class="agenda-main">Dinner at home — 2BR unit</div><div class="agenda-note">Cook with Costco haul · First family dinner together · Early night for everyone</div></div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-time">7:30 PM</div><div class="agenda-icon">😴</div>
+      <div class="agenda-content"><div class="agenda-main">Misha to sleep → Baba &amp; Deda on duty</div></div>
+    </div>
+    <div class="agenda-row row-date">
+      <div class="agenda-time">8:00 PM</div><div class="agenda-icon">🌙</div>
+      <div class="agenda-content">
+        <div class="agenda-main">💜 DATE NIGHT #1 — Gleb &amp; Zoe</div>
+        <div class="opts">
+          <div class="opts-title">Choose your vibe:</div>
+          <div class="opt-row"><span class="opt-label">OPT A</span><div class="opt-text"><strong>Beach Romance:</strong> <a href="https://maps.google.com/?q=Mai+Tai+Bar+Royal+Hawaiian+Waikiki" target="_blank">Mai Tai Bar at Royal Hawaiian</a> (birthplace of the Mai Tai, oceanfront) → <a href="https://maps.google.com/?q=Dukes+Waikiki+2335+Kalakaua+Ave" target="_blank">Duke's Waikiki</a> for round 2</div></div>
+          <div class="opt-row"><span class="opt-label">OPT B</span><div class="opt-text"><strong>Craft Cocktail:</strong> <a href="https://maps.google.com/?q=Bar+Leather+Apron+745+Fort+St+Honolulu" target="_blank">Bar Leather Apron</a> (Honolulu's best cocktail bar) → <a href="https://www.skullandcrowntrading.com" target="_blank">Skull &amp; Crown Trading Co.</a> Chinatown (Tue–Sat 5–11 PM)</div></div>
+          <div class="opt-row"><span class="opt-label new-rec">NEW</span><div class="opt-text"><strong>Views + Self-Pour:</strong> <a href="https://maps.google.com/?q=The+Deck+Waikiki" target="_blank">The Deck</a> rooftop bar → <strong>Off The Wall</strong> Ala Moana (pour-your-own beer, cider, wine &amp; mimosa)</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── DAY 3 ─── -->
+<div class="day-card">
+  <div class="day-header">
+    <div class="day-num">3</div>
+    <div class="day-info">
+      <div class="day-date">Tuesday, May 12</div>
+      <div class="day-title">🌿 North Shore — Dole · Turtles · Shrimp · Shave Ice</div>
+      <div class="day-tags">
+        <span class="tag jeep">🚙 Jeep Day 2</span>
+        <span class="tag alert">⏰ Book Hanauma 10AM PDT</span>
+        <span class="tag nap">💤 Car Nap 12:30 ⭐</span>
+      </div>
+    </div>
+  </div>
+  <div class="agenda">
+    <div class="agenda-row">
+      <div class="agenda-time">6:00 AM</div><div class="agenda-icon">🌅</div>
+      <div class="agenda-content"><div class="agenda-main">Misha up — pack cooler, load the Jeep</div><div class="agenda-note">Costco snacks, water, sunscreen, hats · Leave early to beat crowds at every stop</div></div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-time">6:30 AM</div><div class="agenda-icon">🚙</div>
+      <div class="agenda-content"><div class="agenda-main">Depart for North Shore (1.5 hrs)</div><div class="agenda-note">Route: H-1 W → H-2 N → Kamehameha Hwy · Misha happy as the sun rises</div></div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-time">8:00 AM</div><div class="agenda-icon">🍍</div>
+      <div class="agenda-content"><div class="agenda-main"><a href="https://www.doleplantation.com" target="_blank">Dole Plantation</a></div><div class="agenda-note"><a href="https://maps.google.com/?q=Dole+Plantation+64-1550+Kamehameha+Hwy+Wahiawa" target="_blank">64-1550 Kamehameha Hwy, Wahiawa</a> · Opens 9:30 AM · Pineapple Express train · Famous Dole Whip · Misha's first frozen treat 🍍 · Allow 60 min</div></div>
+    </div>
+    <div class="agenda-row row-alert">
+      <div class="agenda-time">9:55 AM</div><div class="agenda-icon">⏰</div>
+      <div class="agenda-content"><div class="agenda-main">🚨 HANAUMA BAY BOOKING — 10:00 AM PDT SHARP</div><div class="agenda-note">Pull over or have Zoe on phone · <a href="https://pros.hnl.info/hanauma-bay" target="_blank">pros.hnl.info/hanauma-bay</a> · 4 adults + 1 infant · MC ****8197 · Earliest May 14 slot · <strong>Sells out in under 5 minutes</strong></div></div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-time">10:15 AM</div><div class="agenda-icon">🐢</div>
+      <div class="agenda-content"><div class="agenda-main"><a href="https://laniakeabeach.com" target="_blank">Laniakea Beach — Turtle Beach</a></div><div class="agenda-note"><a href="https://maps.google.com/?q=Laniakea+Beach+Turtle+Beach+North+Shore+Oahu" target="_blank">Kamehameha Hwy, Haleiwa</a> · Hawaiian green sea turtles come ashore mid-morning · Stay behind rope · Conservation volunteers on site · Misha will lose her mind 🐢 · Allow 60–75 min</div></div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-time">11:30 AM</div><div class="agenda-icon">🦐</div>
+      <div class="agenda-content">
+        <div class="agenda-main">North Shore shrimp lunch</div>
+        <div class="opts">
+          <div class="opts-title">Choose your shrimp truck:</div>
+          <div class="opt-row"><span class="opt-label">OPT A</span><div class="opt-text"><a href="https://maps.google.com/?q=Giovanni%27s+Shrimp+Truck+Kahuku+Oahu" target="_blank">Giovanni's Shrimp Truck</a> · Kahuku · <a href="https://www.tripadvisor.ca/Restaurant_Review-g60651-d807487-Reviews-Giovanni_s_Shrimp_Truck-Kahuku_Oahu_Hawaii.html" target="_blank">TripAdvisor</a> · The OG iconic garlic butter scampi plate (12 shrimp + 2 scoops rice) · Eat at picnic tables</div></div>
+          <div class="opt-row"><span class="opt-label new-rec">NEW ⭐</span><div class="opt-text"><strong>Jenny's Shrimp Truck</strong> · Friend says better than Giovanni's · ORDER: spicy garlic shrimp · Same North Shore strip</div></div>
+          <div class="opt-row"><span class="opt-label new-rec">NEW ⭐</span><div class="opt-text"><strong>Seven Brothers</strong> · Multiple North Shore locations · Friend: "Spencer burger — might be the best burger I've ever had, bun so good"</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-time">12:15 PM</div><div class="agenda-icon">🍧</div>
+      <div class="agenda-content">
+        <div class="agenda-main"><a href="https://matsumotoshaveice.com" target="_blank">Matsumoto's Shave Ice</a> + Hāleʻiwa stroll</div>
+        <div class="agenda-note"><a href="https://maps.google.com/?q=Matsumoto+Shave+Ice+66-111+Kamehameha+Hwy+Haleiwa" target="_blank">66-111 Kamehameha Hwy, Haleiwa</a> · Open 10 AM–6 PM · Get Li Hing Mui flavour · Walk the surf shops with Misha</div>
+        <div class="opts" style="margin-top:8px;">
+          <div class="opts-title">Also on the Haleiwa strip — friend recs:</div>
+          <div class="opt-row"><span class="opt-label new-rec">NEW</span><div class="opt-text"><strong>Haleiwa Bowls</strong> — acai bowls</div></div>
+          <div class="opt-row"><span class="opt-label new-rec">NEW</span><div class="opt-text"><strong>Kono's</strong> — ORDER: pork plate lunch · ❌ skip tacos (soggy per friend)</div></div>
+          <div class="opt-row"><span class="opt-label new-rec">NEW</span><div class="opt-text"><strong>Ted's Bakery</strong> — kalbi plate</div></div>
+          <div class="opt-row"><span class="opt-label new-rec">NEW</span><div class="opt-text"><strong>No7 Poke n Roll</strong> — combo poke + katsu</div></div>
+          <div class="opt-row"><span class="opt-label new-rec">NEW ☕</span><div class="opt-text"><strong>Island Brew Coffee Shop</strong> — across from Kona Brewing · Amazing view</div></div>
+          <div class="opt-row"><span class="opt-label new-rec">NEW</span><div class="opt-text"><strong>Ry's Poke Shack</strong> + <strong>Poke on Da Run</strong> — poke nachos are the standout item</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="agenda-row row-nap">
+      <div class="agenda-time">12:30 PM</div><div class="agenda-icon">💤</div>
+      <div class="agenda-content"><div class="agenda-main">💤 NAP — Car nap · Load Misha, begin 1.5 hr highway drive back to Honolulu ⭐ Best nap of the trip</div><div class="agenda-note">Full belly, tired from turtles + beach · Guaranteed deep sleep on the highway · Arrive home with a refreshed, happy baby · Do a block loop if needed to extend</div></div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-time">2:00 PM</div><div class="agenda-icon">🏨</div>
+      <div class="agenda-content"><div class="agenda-main">Back at hotel — transfer Misha if still sleeping</div><div class="agenda-note">Pool or lanai time for grandparents · Gleb &amp; Zoe decompress from big day</div></div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-time">6:00 PM</div><div class="agenda-icon">🍳</div>
+      <div class="agenda-content"><div class="agenda-main">Dinner at home — Costco cook</div><div class="agenda-note">Everyone happily exhausted from the big North Shore day</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── DAY 4 ─── -->
+<div class="day-card">
+  <div class="day-header">
+    <div class="day-num">4</div>
+    <div class="day-info">
+      <div class="day-date">Wednesday, May 13</div>
+      <div class="day-title">🏝️ Ko Olina Lagoons + Special Family Dinner</div>
+      <div class="day-tags">
+        <span class="tag jeep">🚙 Jeep Day 3</span>
+        <span class="tag beach">🌊 Ko Olina</span>
+        <span class="tag nap">💤 Stroller Nap 12:30</span>
+        <span class="tag food">🍽️ Fine Dining</span>
+      </div>
+    </div>
+  </div>
+  <div class="agenda">
+    <div class="agenda-row">
+      <div class="agenda-time">6:00 AM</div><div class="agenda-icon">🌅</div>
+      <div class="agenda-content"><div class="agenda-main">Misha up — pack cooler, load Jeep</div><div class="agenda-note">Leave early — Ko Olina parking fills fast in the morning</div></div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-time">6:45 AM</div><div class="agenda-icon">🚙</div>
+      <div class="agenda-content"><div class="agenda-main">Depart for Ko Olina (~40 min west)</div><div class="agenda-note">H-1 Freeway West toward Kapolei · Light traffic this early</div></div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-time">7:30 AM</div><div class="agenda-icon">🌊</div>
+      <div class="agenda-content"><div class="agenda-main"><a href="https://maps.google.com/?q=Ko+Olina+Lagoons+Kapolei+Hawaii" target="_blank">Ko Olina Lagoons — Lagoon 1 or 4</a></div><div class="agenda-note">Four protected man-made coves · Zero waves · Crystal clear water · Tide pools · Perfect for Misha · <a href="https://hilittlebird.com/oahu-for-kids/best-oahu-family-beach-koolina/" target="_blank">Full family guide →</a> · Grandparents in the shade · Gleb &amp; Zoe get solo time</div></div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-time">12:00 PM</div><div class="agenda-icon">🥪</div>
+      <div class="agenda-content"><div class="agenda-main">Packed Costco lunch at shaded lagoon tables</div></div>
+    </div>
+    <div class="agenda-row row-nap">
+      <div class="agenda-time">12:30 PM</div><div class="agenda-icon">💤</div>
+      <div class="agenda-content"><div class="agenda-main">💤 NAP — Stroller walk along Ko Olina beach path</div><div class="agenda-note">Flat, shaded, beautiful coastal path · Grandparents take turns pushing · Misha asleep within 10 min · ~1.5 hr loop · Gleb &amp; Zoe get solo beach time</div></div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-time">2:15 PM</div><div class="agenda-icon">🚙</div>
+      <div class="agenda-content"><div class="agenda-main">Load Jeep, drive back to Honolulu (~40 min)</div><div class="agenda-note">Misha happy and refreshed post-nap for the drive back</div></div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-time">3:30 PM</div><div class="agenda-icon">🏊</div>
+      <div class="agenda-content"><div class="agenda-main">Hotel pool / lanai time</div></div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-time">6:30 PM</div><div class="agenda-icon">🍽️</div>
+      <div class="agenda-content">
+        <div class="agenda-main">Special Family Dinner — book in advance!</div>
+        <div class="opts">
+          <div class="opts-title">Choose your restaurant:</div>
+          <div class="opt-row"><span class="opt-label">OPT A</span><div class="opt-text"><a href="https://www.stripsteak.com/location/waikiki/" target="_blank">Stripsteak Waikiki</a> (Michael Mina) · International Market Place · <a href="https://www.opentable.com/r/stripsteak-oahu-honolulu" target="_blank">Reserve on OpenTable →</a></div></div>
+          <div class="opt-row"><span class="opt-label">OPT B</span><div class="opt-text"><a href="https://noburestaurants.com" target="_blank">Nobu Waikiki</a> · 2233 Helumoa Rd · <a href="https://maps.google.com/?q=Nobu+Waikiki+2233+Helumoa+Rd" target="_blank">Google Maps →</a></div></div>
+          <div class="opt-row"><span class="opt-label new-rec">NEW ⭐</span><div class="opt-text"><strong>Pig and the Lady</strong> · Chinatown · Hard to get reso — book early ⚠️ · Expensive but excellent · ORDER: marinated ahi toast · Burmese tea salad · bo kho pappardelle · chicken wings · Brussels sprouts</div></div>
+          <div class="opt-row"><span class="opt-label new-rec">NEW</span><div class="opt-text"><strong>Rigo</strong> · Friend rec · ORDER: crostini &amp; bolognese · (carbonara is good but very rich)</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── DAY 5 ─── -->
+<div class="day-card">
+  <div class="day-header">
+    <div class="day-num">5</div>
+    <div class="day-info">
+      <div class="day-date">Thursday, May 14</div>
+      <div class="day-title">🐠 Hanauma Bay + Jeep Return</div>
+      <div class="day-tags">
+        <span class="tag alert">🔑 Jeep Return 1PM HARD</span>
+        <span class="tag beach">🤿 Snorkel</span>
+        <span class="tag nap">💤 Car → Crib 12:30</span>
+      </div>
+    </div>
+  </div>
+  <div class="agenda">
+    <div class="agenda-row">
+      <div class="agenda-time">5:30 AM</div><div class="agenda-icon">⏰</div>
+      <div class="agenda-content"><div class="agenda-main">Early wake-up — Misha will be up anyway!</div><div class="agenda-note">Load car in the dark · Pack snorkel gear, beach shade tent, snacks · $3 cash for parking</div></div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-time">6:15 AM</div><div class="agenda-icon">🚙</div>
+      <div class="agenda-content"><div class="agenda-main">Drive to Hanauma Bay (~25 min)</div><div class="agenda-note"><a href="https://maps.google.com/?q=Hanauma+Bay+Nature+Preserve+100+Hanauma+Bay+Rd+Honolulu" target="_blank">100 Hanauma Bay Rd, Honolulu</a></div></div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-time">6:45 AM</div><div class="agenda-icon">🐠</div>
+      <div class="agenda-content"><div class="agenda-main"><a href="https://pros.hnl.info/hanauma-bay" target="_blank">Hanauma Bay Nature Preserve — opens</a></div><div class="agenda-note">Show QR code tickets · Watch mandatory reef education video (~20 min) · Grandparents + Misha in the sand shallows · Gleb &amp; Zoe snorkel the inner reef · <strong>Reef-safe sunscreen required</strong> · <a href="https://www.honolulu.gov/dpr/hanauma-bay-nature-preserve/" target="_blank">Park info →</a></div></div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-time">11:00 AM</div><div class="agenda-icon">🧳</div>
+      <div class="agenda-content"><div class="agenda-main">Pack up, head to parking lot</div><div class="agenda-note">Allow 25 min drive back + buffer for hard Jeep deadline</div></div>
+    </div>
+    <div class="agenda-row row-nap">
+      <div class="agenda-time">12:30 PM</div><div class="agenda-icon">💤</div>
+      <div class="agenda-content"><div class="agenda-main">💤 NAP — Car nap in Jeep · Hanauma Bay → hotel / Jeep return</div><div class="agenda-note">Full morning at the beach · Misha tired, fed, sun-kissed · Perfect carseat sleep on the drive back · Transfer directly to hotel crib on arrival</div></div>
+    </div>
+    <div class="agenda-row row-alert">
+      <div class="agenda-time">1:00 PM</div><div class="agenda-icon">🔑</div>
+      <div class="agenda-content"><div class="agenda-main">🚨 Return Jeep to Jun — HARD DEADLINE</div><div class="agenda-note"><a href="https://maps.google.com/?q=1810+Kapiolani+Blvd+Honolulu+HI" target="_blank">1810 Kapiolani Blvd</a> · Jun Lan · 📞 909-979-7672 · Text ahead to confirm</div></div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-time">1:15 PM</div><div class="agenda-icon">🏨</div>
+      <div class="agenda-content"><div class="agenda-main">Transfer sleeping Misha to hotel crib · Best handoff of the week</div><div class="agenda-note">She won't notice the swap · Grandparents on watch · Full 2 hrs uninterrupted crib nap</div></div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-time">2:30 PM</div><div class="agenda-icon">🥞</div>
+      <div class="agenda-content">
+        <div class="agenda-main">Brunch — Gleb &amp; Zoe (grandparents with Misha)</div>
+        <div class="opts">
+          <div class="opts-title">Choose:</div>
+          <div class="opt-row"><span class="opt-label">OPT A</span><div class="opt-text"><a href="https://www.kokoheadcafe.com" target="_blank">Koko Head Café</a> · <a href="https://maps.google.com/?q=Koko+Head+Cafe+1120+12th+Ave+Honolulu" target="_blank">1120 12th Ave</a> · Korean-Hawaiian brunch · <a href="https://www.opentable.com/r/koko-head-cafe-honolulu" target="_blank">OpenTable waitlist →</a></div></div>
+          <div class="opt-row"><span class="opt-label">OPT B</span><div class="opt-text"><a href="https://maps.google.com/?q=Rainbow+Drive-In+3308+Kanaina+Ave+Honolulu" target="_blank">Rainbow Drive-In</a> · 3308 Kanaina Ave · Loco moco + mac salad + 2 scoops rice · Institution since 1940</div></div>
+          <div class="opt-row"><span class="opt-label new-rec">NEW</span><div class="opt-text"><strong>Da Bald Guy</strong> · ⏰ Open 6 AM–2 PM · Go early — may sell out! · Friend rec ⭐ · ORDER: kalbi beef</div></div>
+          <div class="opt-row"><span class="opt-label new-rec">NEW</span><div class="opt-text"><strong>Marugame Udon</strong> · Classic Hawaii stop · ORDER: nikutama + chicken katsu + shrimp tempura</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-time">4:00 PM</div><div class="agenda-icon">🏊</div>
+      <div class="agenda-content"><div class="agenda-main">Hotel pool afternoon — full family</div></div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-time">6:30 PM</div><div class="agenda-icon">🍳</div>
+      <div class="agenda-content"><div class="agenda-main">Easy dinner at home from Costco</div><div class="agenda-note">Quiet evening — big fireworks day tomorrow!</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── DAY 6 ─── -->
+<div class="day-card">
+  <div class="day-header">
+    <div class="day-num">6</div>
+    <div class="day-info">
+      <div class="day-date">Friday, May 15</div>
+      <div class="day-title">🎆 Waikiki Day + Friday Fireworks + Date Night #2</div>
+      <div class="day-tags">
+        <span class="tag fireworks">🎆 Fireworks Night</span>
+        <span class="tag nap">💤 Stroller Nap 12:30</span>
+        <span class="tag date">💜 Date Night</span>
+      </div>
+    </div>
+  </div>
+  <div class="agenda">
+    <div class="agenda-row">
+      <div class="agenda-time">6:00 AM</div><div class="agenda-icon">🌊</div>
+      <div class="agenda-content"><div class="agenda-main">Early Waikiki Beach walk</div><div class="agenda-note">Golden hour, near-empty sand · Misha loves the water at this time · Best photos of the whole trip</div></div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-time">8:30 AM</div><div class="agenda-icon">🍩</div>
+      <div class="agenda-content">
+        <div class="agenda-main"><a href="https://leonardshawaii.com/locations/" target="_blank">Leonard's Bakery — Malasadas</a></div>
+        <div class="agenda-note"><a href="https://maps.google.com/?q=Leonard%27s+Bakery+933+Kapahulu+Ave+Honolulu" target="_blank">933 Kapahulu Ave</a> · Open 5:30 AM · Lines out the door but moves fast · ORDER: Original + Cinnamon Sugar · Non-negotiable Hawaii stop</div>
+        <div class="opts" style="margin-top:8px;">
+          <div class="opts-title">Also this morning — friend rec:</div>
+          <div class="opt-row"><span class="opt-label new-rec">NEW ⭐</span><div class="opt-text"><strong>Island Vintage Coffee</strong> · ORDER: acai bowl (friend's best of 3 tested) + chicken pesto panini · Expect a wait · Worth it</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-time">10:00 AM</div><div class="agenda-icon">🛍️</div>
+      <div class="agenda-content"><div class="agenda-main"><a href="https://maps.google.com/?q=Ala+Moana+Center+1450+Ala+Moana+Blvd+Honolulu" target="_blank">Ala Moana Shopping Center</a></div><div class="agenda-note">World's largest open-air mall · 5 min walk from hotel · Hawaii gifts, souvenirs, kids stuff for Misha</div></div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-time">12:00 PM</div><div class="agenda-icon">🐟</div>
+      <div class="agenda-content">
+        <div class="agenda-main">Poke lunch</div>
+        <div class="opts">
+          <div class="opts-title">Choose:</div>
+          <div class="opt-row"><span class="opt-label">OPT A</span><div class="opt-text"><a href="https://foodland.com/about-foodland-farms-ala-moana/" target="_blank">Foodland Farms Ala Moana</a> · 1450 Ala Moana Blvd · Eat on the beach lawn</div></div>
+          <div class="opt-row"><span class="opt-label new-rec">NEW</span><div class="opt-text"><strong>Ono Seafood</strong> · Friend rec · ORDER: spicy salmon + shoyu ahi</div></div>
+          <div class="opt-row"><span class="opt-label new-rec">NEW</span><div class="opt-text"><strong>Musubi Cafe</strong> · Quick grab · ORDER: cucumber musubi + kimchi musubi</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="agenda-row row-nap">
+      <div class="agenda-time">12:30 PM</div><div class="agenda-icon">💤</div>
+      <div class="agenda-content"><div class="agenda-main">💤 NAP — Stroller walk · Ala Moana beach path → Magic Island loop</div><div class="agenda-note">Flat, shaded, beautiful coastal route · Misha asleep in minutes · ~1.5 hr loop · Grandparents take turns · Gleb &amp; Zoe quiet time on the grass</div></div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-time">2:30 PM</div><div class="agenda-icon">🍺</div>
+      <div class="agenda-content">
+        <div class="agenda-main">Afternoon drinks — hotel pool or nearby</div>
+        <div class="opts">
+          <div class="opts-title">Happy hour options:</div>
+          <div class="opt-row"><span class="opt-label new-rec">⏰ HH</span><div class="opt-text"><strong>The Deck</strong> · Happy hour <strong>2–6 PM</strong> · Rooftop · Great views ⭐</div></div>
+          <div class="opt-row"><span class="opt-label new-rec">NEW</span><div class="opt-text"><strong>Off The Wall</strong> (Ala Moana) · Pour-your-own beer, cider, wine &amp; mimosa — great afternoon activity</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-time">6:00 PM</div><div class="agenda-icon">🍳</div>
+      <div class="agenda-content"><div class="agenda-main">Early family dinner at home</div><div class="agenda-note">Get everyone fed and settled before fireworks · Quick Costco meal</div></div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-time">7:45 PM</div><div class="agenda-icon">🎆</div>
+      <div class="agenda-content"><div class="agenda-main">Friday Night Fireworks — Hilton Hawaiian Village</div><div class="agenda-note">RIGHT at your hotel beach · Whole family including Misha · Grab a spot on the beach or watch from your lanai · Weather permitting · Every Friday</div></div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-time">8:30 PM</div><div class="agenda-icon">😴</div>
+      <div class="agenda-content"><div class="agenda-main">Misha to sleep → Baba &amp; Deda on duty</div></div>
+    </div>
+    <div class="agenda-row row-date">
+      <div class="agenda-time">9:00 PM</div><div class="agenda-icon">🌙</div>
+      <div class="agenda-content">
+        <div class="agenda-main">💜 DATE NIGHT #2 — Gleb &amp; Zoe</div>
+        <div class="opts">
+          <div class="opts-title">Choose your vibe:</div>
+          <div class="opt-row"><span class="opt-label">OPT A</span><div class="opt-text"><a href="https://skywaikiki.com" target="_blank">SKY Waikiki</a> — 19th floor panoramic bar · Diamond Head views · DJ · handcrafted cocktails</div></div>
+          <div class="opt-row"><span class="opt-label">OPT B</span><div class="opt-text"><a href="https://maps.google.com/?q=House+Without+a+Key+Halekulani+Hotel+Waikiki" target="_blank">House Without A Key</a> — Halekulani Hotel · Open-air beachfront bar · Live Hawaiian music · Hula dancers</div></div>
+          <div class="opt-row"><span class="opt-label new-rec">NEW ⭐</span><div class="opt-text"><strong>Pig and the Lady</strong> — if not used on Day 4 · Hard reso · ORDER: ahi toast, Burmese tea salad, bo kho pappardelle</div></div>
+          <div class="opt-row"><span class="opt-label new-rec">NEW</span><div class="opt-text"><strong>Katsumidori Sushi</strong> — fish from Japan · Max Holloway eats here · Great date night sushi</div></div>
+          <div class="opt-row"><span class="opt-label new-rec">NEW</span><div class="opt-text"><strong>Da Seafood Cartel</strong> — ORDER: blue crab dip + ceviche</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── DAY 7 ─── -->
+<div class="day-card">
+  <div class="day-header">
+    <div class="day-num">7</div>
+    <div class="day-info">
+      <div class="day-date">Saturday, May 16</div>
+      <div class="day-title">🏖️ Kailua Beach + Farewell Dinner</div>
+      <div class="day-tags">
+        <span class="tag beach">🌊 Kailua</span>
+        <span class="tag nap">💤 Uber Nap 12:30</span>
+        <span class="tag food">🥂 Farewell Dinner</span>
+      </div>
+    </div>
+  </div>
+  <div class="agenda">
+    <div class="agenda-row">
+      <div class="agenda-time">6:00 AM</div><div class="agenda-icon">☀️</div>
+      <div class="agenda-content"><div class="agenda-main">Final Waikiki morning walk + coffees</div></div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-time">8:00 AM</div><div class="agenda-icon">🚘</div>
+      <div class="agenda-content"><div class="agenda-main">Uber to Kailua Beach (~35 min)</div><div class="agenda-note">Head over before crowds arrive · Stunning windward coast drive</div></div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-time">8:45 AM</div><div class="agenda-icon">🌊</div>
+      <div class="agenda-content"><div class="agenda-main"><a href="https://maps.google.com/?q=Kailua+Beach+Park+Oahu+Hawaii" target="_blank">Kailua Beach Park</a></div><div class="agenda-note">One of Oahu's most beautiful beaches · Powder-white sand · Gentle turquoise surf · Misha's favourite water conditions of the trip · Great photos here</div></div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-time">12:00 PM</div><div class="agenda-icon">🥗</div>
+      <div class="agenda-content"><div class="agenda-main"><a href="https://kalapawaimarket.com/kailua-town/" target="_blank">Lunch at Kalapawai Café</a></div><div class="agenda-note"><a href="https://maps.google.com/?q=Kalapawai+Cafe+750+Kailua+Rd+Kailua" target="_blank">750 Kailua Rd, Kailua</a> · Open from 7 AM · Local favourite · Great sandwiches and salads · Eat outside</div></div>
+    </div>
+    <div class="agenda-row row-nap">
+      <div class="agenda-time">12:30 PM</div><div class="agenda-icon">💤</div>
+      <div class="agenda-content"><div class="agenda-main">💤 NAP — Uber home (~35 min) · Time it perfectly</div><div class="agenda-note">Order Uber to coincide exactly with nap window · Misha sleeps the whole ride · Transfer to hotel crib on arrival · Grandparents receive sleeping baby</div></div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-time">1:15 PM</div><div class="agenda-icon">🧳</div>
+      <div class="agenda-content"><div class="agenda-main">Grandparents with sleeping Misha · Gleb &amp; Zoe last pool dip + start packing</div></div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-time">6:00 PM</div><div class="agenda-icon">🥂</div>
+      <div class="agenda-content">
+        <div class="agenda-main">Farewell Family Dinner — book in advance!</div>
+        <div class="opts">
+          <div class="opts-title">Choose your restaurant:</div>
+          <div class="opt-row"><span class="opt-label">OPT A</span><div class="opt-text"><a href="https://www.halekulani.com/dining/orchids/" target="_blank">Orchids at Halekulani</a> · AAA Five Diamond · Oceanfront · Hawaii's finest · <a href="https://maps.google.com/?q=Orchids+Restaurant+Halekulani+2199+Kalia+Rd+Honolulu" target="_blank">2199 Kalia Rd</a> · 📞 808-518-2019</div></div>
+          <div class="opt-row"><span class="opt-label">OPT B</span><div class="opt-text"><strong>Taormina Sicilian Cuisine</strong> · Outstanding pasta + seafood · More relaxed family feel · <a href="https://maps.google.com/?q=Taormina+Sicilian+Cuisine+Waikiki+Honolulu" target="_blank">Google Maps →</a></div></div>
+          <div class="opt-row"><span class="opt-label new-rec">NEW</span><div class="opt-text"><strong>I-Naba Japanese Restaurant</strong> · Higher-end Japanese · Great farewell dinner option</div></div>
+          <div class="opt-row"><span class="opt-label new-rec">NEW ⭐</span><div class="opt-text"><strong>Pig and the Lady</strong> — if not used yet · ⚠️ Book early, fills up fast</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── DAY 8 ─── -->
+<div class="day-card">
+  <div class="day-header">
+    <div class="day-num">8</div>
+    <div class="day-info">
+      <div class="day-date">Sunday, May 17</div>
+      <div class="day-title">✈️ Departure Day</div>
+      <div class="day-tags">
+        <span class="tag nap">🛺 Last Stroller Nap 12:30</span>
+        <span class="tag alert">✈️ Night Flights</span>
+      </div>
+    </div>
+  </div>
+  <div class="agenda">
+    <div class="agenda-row">
+      <div class="agenda-time">6:00 AM</div><div class="agenda-icon">🌅</div>
+      <div class="agenda-content"><div class="agenda-main">Last sunrise run (Gleb) + Zoe &amp; Misha last beach walk</div></div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-time">8:00 AM</div><div class="agenda-icon">🧳</div>
+      <div class="agenda-content"><div class="agenda-main">Final packing</div></div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-time">10:00 AM</div><div class="agenda-icon">🏨</div>
+      <div class="agenda-content"><div class="agenda-main">Hotel check-out — store bags in 8th floor Arrival Lounge</div><div class="agenda-note">Lounge open 8 AM–6 PM · Check-out hard deadline 10 AM</div></div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-time">11:00 AM</div><div class="agenda-icon">🏖️</div>
+      <div class="agenda-content">
+        <div class="agenda-main">Last Waikiki stroll + final lunch</div>
+        <div class="opts">
+          <div class="opts-title">Last meal options:</div>
+          <div class="opt-row"><span class="opt-label">OPT A</span><div class="opt-text"><strong>Eggs 'n Things</strong> · Classic Waikiki breakfast-all-day spot</div></div>
+          <div class="opt-row"><span class="opt-label new-rec">NEW</span><div class="opt-text"><strong>Ramen Bario at STIX Asia</strong> · Friend rec · ORDER: spicy tonkotsu — great final meal</div></div>
+          <div class="opt-row"><span class="opt-label new-rec">NEW</span><div class="opt-text"><strong>Liliha Bakery</strong> · Friend rec · ORDER: spam &amp; eggs or oxtail soup</div></div>
+          <div class="opt-row"><span class="opt-label new-rec">NEW</span><div class="opt-text"><strong>Musubi Cafe</strong> · Quick &amp; easy · ORDER: cucumber + kimchi musubi for the road</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="agenda-row row-nap">
+      <div class="agenda-time">12:30 PM</div><div class="agenda-icon">💤</div>
+      <div class="agenda-content"><div class="agenda-main">💤 NAP — Final stroller walk · Waikiki → Ala Wai canal path</div><div class="agenda-note">Misha naps · You soak in the very last hour in paradise · Walk toward the canal · Slow, gentle, perfect</div></div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-time">2:30 PM</div><div class="agenda-icon">🍩</div>
+      <div class="agenda-content"><div class="agenda-main"><a href="https://leonardshawaii.com/locations/" target="_blank">Leonard's Airport Location — One Last Malasada</a></div><div class="agenda-note"><a href="https://maps.google.com/?q=Leonard%27s+Bakery+540+Lagoon+Dr+Honolulu" target="_blank">540 Lagoon Dr</a> · On the way to HNL · Perfect final Hawaii bite 🍩</div></div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-time">3:00 PM</div><div class="agenda-icon">🚘</div>
+      <div class="agenda-content"><div class="agenda-main">Uber to HNL — Daniel K. Inouye Airport</div><div class="agenda-note">Allow 45 min + buffer · Both groups head to airport together</div></div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-time">3:45 PM</div><div class="agenda-icon">🛫</div>
+      <div class="agenda-content"><div class="agenda-main">Airport check-in · bags · security · Dinner at HNL</div></div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-time">9:55 PM</div><div class="agenda-icon">✈️</div>
+      <div class="agenda-content"><div class="agenda-main">Andrei &amp; Larissa depart — AC518</div><div class="agenda-note">Ref: C898G4 · Arrives YVR 06:53+1</div></div>
+    </div>
+    <div class="agenda-row">
+      <div class="agenda-time">10:05 PM</div><div class="agenda-icon">✈️</div>
+      <div class="agenda-content"><div class="agenda-main">Gleb, Zoe &amp; Misha depart — AC518</div><div class="agenda-note">Ref: A5YSL2 · Arrives YVR 07:00+1 · Aloha 🌺</div></div>
+    </div>
+  </div>
+</div>
+
+</div><!-- end days-wrap -->
+</div><!-- end schedule tab -->
+
+<!-- ═══════════════ FOOD TAB ═══════════════ -->
+<div class="tab-panel" id="tab-food">
+<div class="section-title">🍜 Complete Food Guide</div>
+<div class="food-wrap">
+
+  <!-- BREAKFAST & COFFEE -->
+  <div class="food-section-head"><h3>☀️ Breakfast &amp; Coffee</h3></div>
+  <div class="food-grid">
+
+    <div class="food-card">
+      <div class="fc-icon">🍩</div>
+      <div class="fc-badge badge-original">MUST-DO</div>
+      <div class="fc-name">Leonard's Bakery</div>
+      <div class="fc-where"><a href="https://maps.google.com/?q=Leonard%27s+Bakery+933+Kapahulu+Ave+Honolulu" target="_blank">933 Kapahulu Ave</a> · Open 5:30 AM</div>
+      <div class="fc-day">📅 Day 6 + Day 8 (airport)</div>
+      <ul class="fc-orders">
+        <li>🥐 Original malasada — warm &amp; powdered</li>
+        <li>⭐ Cinnamon sugar malasada</li>
+        <li>🍩 Custard-filled if available</li>
+      </ul>
+    </div>
+
+    <div class="food-card friend-pick">
+      <div class="fc-icon">☕</div>
+      <div class="fc-badge badge-friends">FRIEND REC</div>
+      <div class="fc-name">Island Vintage Coffee</div>
+      <div class="fc-where">Waikiki · Ala Moana area</div>
+      <div class="fc-day">📅 Day 6 morning</div>
+      <ul class="fc-orders">
+        <li>⭐ Acai bowl — best of 3 tested per friends</li>
+        <li>🥪 Chicken pesto panini</li>
+        <li>⚠️ Expect a wait — worth it</li>
+      </ul>
+    </div>
+
+    <div class="food-card friend-pick">
+      <div class="fc-icon">🍳</div>
+      <div class="fc-badge badge-friends">FRIEND REC</div>
+      <div class="fc-name">Da Bald Guy</div>
+      <div class="fc-where">Honolulu · ⏰ 6 AM–2 PM only</div>
+      <div class="fc-day">📅 Day 5 brunch</div>
+      <ul class="fc-orders">
+        <li>⭐ Kalbi beef plate</li>
+        <li>⚠️ May sell out — go early!</li>
+        <li>🕐 Not open for dinner</li>
+      </ul>
+    </div>
+
+    <div class="food-card">
+      <div class="fc-icon">🥚</div>
+      <div class="fc-badge badge-original">CLASSIC</div>
+      <div class="fc-name">Eggs 'n Things</div>
+      <div class="fc-where"><a href="https://maps.google.com/?q=Eggs+n+Things+343+Saratoga+Rd+Honolulu" target="_blank">343 Saratoga Rd, Waikiki</a></div>
+      <div class="fc-day">📅 Anytime / Backup</div>
+      <ul class="fc-orders">
+        <li>🥞 Pancakes with whipped cream</li>
+        <li>🍳 Eggs any style plates</li>
+        <li>☕ Opens early — good with Misha</li>
+      </ul>
+    </div>
+
+    <div class="food-card friend-pick">
+      <div class="fc-icon">☕</div>
+      <div class="fc-badge badge-friends">FRIEND REC</div>
+      <div class="fc-name">Island Brew Coffee Shop</div>
+      <div class="fc-where">North Shore · Across from Kona Brewing</div>
+      <div class="fc-day">📅 Day 3 (North Shore)</div>
+      <ul class="fc-orders">
+        <li>⭐ Amazing ocean views</li>
+        <li>☕ Great local coffee</li>
+        <li>🌊 Morning stop before shrimp trucks</li>
+      </ul>
+    </div>
+
+  </div><!-- end grid -->
+
+  <!-- QUICK EATS & LUNCH -->
+  <div class="food-section-head"><h3>🐟 Poke, Musubi &amp; Quick Eats</h3></div>
+  <div class="food-grid">
+
+    <div class="food-card">
+      <div class="fc-icon">🍣</div>
+      <div class="fc-badge badge-original">RELIABLE</div>
+      <div class="fc-name">Foodland Farms Poke Counter</div>
+      <div class="fc-where"><a href="https://foodland.com/about-foodland-farms-ala-moana/" target="_blank">1450 Ala Moana Blvd</a></div>
+      <div class="fc-day">📅 Days 2, 6</div>
+      <ul class="fc-orders">
+        <li>🐟 Multiple varieties — always fresh</li>
+        <li>🥗 Mix-and-match bowls</li>
+        <li>Eat on the beach lawn next door</li>
+      </ul>
+    </div>
+
+    <div class="food-card friend-pick">
+      <div class="fc-icon">🐟</div>
+      <div class="fc-badge badge-friends">FRIEND REC</div>
+      <div class="fc-name">Ono Seafood</div>
+      <div class="fc-where">Honolulu</div>
+      <div class="fc-day">📅 Days 2, 6</div>
+      <ul class="fc-orders">
+        <li>⭐ Spicy salmon poke</li>
+        <li>⭐ Shoyu ahi poke</li>
+        <li>🏆 Friend's favourite poke spot</li>
+      </ul>
+    </div>
+
+    <div class="food-card friend-pick">
+      <div class="fc-icon">🌮</div>
+      <div class="fc-badge badge-friends">FRIEND REC</div>
+      <div class="fc-name">Musubi Cafe Iyasume</div>
+      <div class="fc-where">Waikiki area</div>
+      <div class="fc-day">📅 Any day / Day 8</div>
+      <ul class="fc-orders">
+        <li>⭐ Cucumber musubi</li>
+        <li>⭐ Kimchi musubi</li>
+        <li>🍙 Classic spam musubi</li>
+      </ul>
+    </div>
+
+    <div class="food-card friend-pick">
+      <div class="fc-icon">🍜</div>
+      <div class="fc-badge badge-friends">FRIEND REC</div>
+      <div class="fc-name">Marugame Udon</div>
+      <div class="fc-where">Waikiki · Multiple locations</div>
+      <div class="fc-day">📅 Day 5 brunch option</div>
+      <ul class="fc-orders">
+        <li>⭐ Nikutama (beef + egg udon)</li>
+        <li>⭐ Chicken katsu udon</li>
+        <li>⭐ Shrimp tempura</li>
+      </ul>
+    </div>
+
+    <div class="food-card">
+      <div class="fc-icon">🍚</div>
+      <div class="fc-badge badge-original">ICONIC</div>
+      <div class="fc-name">Rainbow Drive-In</div>
+      <div class="fc-where"><a href="https://maps.google.com/?q=Rainbow+Drive-In+3308+Kanaina+Ave+Honolulu" target="_blank">3308 Kanaina Ave</a> · Since 1940</div>
+      <div class="fc-day">📅 Day 5 brunch option</div>
+      <ul class="fc-orders">
+        <li>🍳 Loco moco — classic plate</li>
+        <li>🍚 Mac salad + 2 scoops rice</li>
+        <li>🥩 Mixed plate</li>
+      </ul>
+    </div>
+
+    <div class="food-card friend-pick">
+      <div class="fc-icon">🫙</div>
+      <div class="fc-badge badge-friends">FRIEND REC</div>
+      <div class="fc-name">Poke on Da Run</div>
+      <div class="fc-where">Multiple locations</div>
+      <div class="fc-day">📅 Any day</div>
+      <ul class="fc-orders">
+        <li>⭐ Poke nachos — THE standout item</li>
+        <li>🐟 Poke bowls</li>
+        <li>🔥 Ask for spicy options</li>
+      </ul>
+    </div>
+
+    <div class="food-card friend-pick">
+      <div class="fc-icon">🍙</div>
+      <div class="fc-badge badge-friends">FRIEND REC</div>
+      <div class="fc-name">Liliha Bakery</div>
+      <div class="fc-where">Honolulu</div>
+      <div class="fc-day">📅 Day 8 last meal option</div>
+      <ul class="fc-orders">
+        <li>⭐ Spam &amp; eggs plate</li>
+        <li>⭐ Oxtail soup</li>
+        <li>🍰 Iconic local bakery</li>
+      </ul>
+    </div>
+
+    <div class="food-card friend-pick">
+      <div class="fc-icon">🍙</div>
+      <div class="fc-badge badge-friends">FRIEND REC</div>
+      <div class="fc-name">Onigiri Onibe + Higoto</div>
+      <div class="fc-where">Honolulu area</div>
+      <div class="fc-day">📅 Backup / Any day</div>
+      <ul class="fc-orders">
+        <li>🍙 Japanese onigiri — fresh fillings</li>
+        <li>🍱 Higoto — Japanese eatery</li>
+        <li>Quick &amp; casual lunch option</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- NORTH SHORE SECTION -->
+  <div class="food-section-head"><h3>🌿 North Shore Strip (Day 3)</h3></div>
+  <div class="food-grid">
+
+    <div class="food-card">
+      <div class="fc-icon">🦐</div>
+      <div class="fc-badge badge-original">CLASSIC</div>
+      <div class="fc-name">Giovanni's Shrimp Truck</div>
+      <div class="fc-where"><a href="https://maps.google.com/?q=Giovanni%27s+Shrimp+Truck+Kahuku+Oahu" target="_blank">Kahuku, North Shore</a> · <a href="https://www.tripadvisor.ca/Restaurant_Review-g60651-d807487-Reviews-Giovanni_s_Shrimp_Truck-Kahuku_Oahu_Hawaii.html" target="_blank">TripAdvisor →</a></div>
+      <div class="fc-day">📅 Day 3 lunch</div>
+      <ul class="fc-orders">
+        <li>🧄 Garlic butter scampi plate</li>
+        <li>🍚 Comes with 2 scoops rice</li>
+        <li>⭐ Legendary · been here 30+ years</li>
+      </ul>
+    </div>
+
+    <div class="food-card friend-pick">
+      <div class="fc-icon">🦐</div>
+      <div class="fc-badge badge-friends">FRIEND REC ⭐</div>
+      <div class="fc-name">Jenny's Shrimp Truck</div>
+      <div class="fc-where">North Shore strip</div>
+      <div class="fc-day">📅 Day 3 lunch</div>
+      <ul class="fc-orders">
+        <li>⭐ Spicy garlic shrimp</li>
+        <li>🏆 Friend says better than Giovanni's</li>
+        <li>Same area — try both if hungry!</li>
+      </ul>
+    </div>
+
+    <div class="food-card friend-pick">
+      <div class="fc-icon">🍔</div>
+      <div class="fc-badge badge-friends">FRIEND REC ⭐</div>
+      <div class="fc-name">Seven Brothers</div>
+      <div class="fc-where">Multiple North Shore locations</div>
+      <div class="fc-day">📅 Day 3</div>
+      <ul class="fc-orders">
+        <li>⭐ Spencer burger</li>
+        <li>🏆 "Best burger I've ever had, bun so good"</li>
+        <li>🍟 Local institution</li>
+      </ul>
+    </div>
+
+    <div class="food-card">
+      <div class="fc-icon">🍧</div>
+      <div class="fc-badge badge-original">ICONIC</div>
+      <div class="fc-name">Matsumoto's Shave Ice</div>
+      <div class="fc-where"><a href="https://matsumotoshaveice.com" target="_blank">matsumotoshaveice.com</a> · <a href="https://maps.google.com/?q=Matsumoto+Shave+Ice+66-111+Kamehameha+Hwy+Haleiwa" target="_blank">66-111 Kamehameha Hwy</a></div>
+      <div class="fc-day">📅 Day 3 afternoon</div>
+      <ul class="fc-orders">
+        <li>🍧 Li Hing Mui flavour — must-order</li>
+        <li>🍨 Add ice cream base (+$1.50)</li>
+        <li>⏰ Open 10 AM–6 PM</li>
+      </ul>
+    </div>
+
+    <div class="food-card friend-pick">
+      <div class="fc-icon">🥩</div>
+      <div class="fc-badge badge-friends">FRIEND REC</div>
+      <div class="fc-name">Ted's Bakery</div>
+      <div class="fc-where">Sunset Beach, North Shore</div>
+      <div class="fc-day">📅 Day 3</div>
+      <ul class="fc-orders">
+        <li>⭐ Kalbi plate lunch</li>
+        <li>🍰 Chocolate haupia cream pie</li>
+        <li>🥧 Famous for pies — grab one!</li>
+      </ul>
+    </div>
+
+    <div class="food-card friend-pick">
+      <div class="fc-icon">🥗</div>
+      <div class="fc-badge badge-friends">FRIEND REC</div>
+      <div class="fc-name">Haleiwa Bowls + No7 Poke n Roll</div>
+      <div class="fc-where">Haleiwa town</div>
+      <div class="fc-day">📅 Day 3 strip walk</div>
+      <ul class="fc-orders">
+        <li>🥗 Acai bowls — Haleiwa Bowls</li>
+        <li>🍱 Combo poke + katsu — No7</li>
+        <li>Kono's: pork lunch · ❌ skip tacos</li>
+      </ul>
+    </div>
+
+    <div class="food-card">
+      <div class="fc-icon">🍍</div>
+      <div class="fc-badge badge-original">STOP</div>
+      <div class="fc-name">Dole Plantation</div>
+      <div class="fc-where"><a href="https://maps.google.com/?q=Dole+Plantation+64-1550+Kamehameha+Hwy+Wahiawa" target="_blank">64-1550 Kamehameha Hwy</a></div>
+      <div class="fc-day">📅 Day 3 morning</div>
+      <ul class="fc-orders">
+        <li>🍍 Dole Whip — original soft serve</li>
+        <li>🚂 Pineapple Express train ride</li>
+        <li>⏰ Opens 9:30 AM</li>
+      </ul>
+    </div>
+
+    <div class="food-card friend-pick">
+      <div class="fc-icon">🐟</div>
+      <div class="fc-badge badge-friends">FRIEND REC</div>
+      <div class="fc-name">Ry's Poke Shack + Foodland</div>
+      <div class="fc-where">North Shore area</div>
+      <div class="fc-day">📅 Day 3 backup</div>
+      <ul class="fc-orders">
+        <li>⭐ Ry's — solid North Shore poke</li>
+        <li>🛒 Foodland always reliable</li>
+        <li>Good if other spots have long lines</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- NICER DINNERS -->
+  <div class="food-section-head"><h3>🍽️ Nicer Dinners &amp; Special Occasions</h3></div>
+  <div class="food-grid">
+
+    <div class="food-card">
+      <div class="fc-icon">🥩</div>
+      <div class="fc-badge badge-original">BOOK AHEAD</div>
+      <div class="fc-name">Stripsteak Waikiki</div>
+      <div class="fc-where"><a href="https://www.stripsteak.com/location/waikiki/" target="_blank">stripsteak.com</a> · International Market Place · <a href="https://www.opentable.com/r/stripsteak-oahu-honolulu" target="_blank">OpenTable →</a></div>
+      <div class="fc-day">📅 Day 4 option</div>
+      <ul class="fc-orders">
+        <li>🥩 Michael Mina restaurant</li>
+        <li>🍸 Award-winning cocktails</li>
+        <li>Family-friendly fine dining</li>
+      </ul>
+    </div>
+
+    <div class="food-card">
+      <div class="fc-icon">🍣</div>
+      <div class="fc-badge badge-original">BOOK AHEAD</div>
+      <div class="fc-name">Nobu Waikiki</div>
+      <div class="fc-where"><a href="https://noburestaurants.com" target="_blank">noburestaurants.com</a> · <a href="https://maps.google.com/?q=Nobu+Waikiki+2233+Helumoa+Rd" target="_blank">2233 Helumoa Rd</a></div>
+      <div class="fc-day">📅 Day 4 option</div>
+      <ul class="fc-orders">
+        <li>🐟 Black cod with miso</li>
+        <li>🥢 Yellowtail jalapeño</li>
+        <li>New-style sashimi</li>
+      </ul>
+    </div>
+
+    <div class="food-card friend-pick">
+      <div class="fc-icon">🌿</div>
+      <div class="fc-badge badge-friends">FRIEND REC ⭐⭐</div>
+      <div class="fc-name">Pig and the Lady</div>
+      <div class="fc-where">Chinatown, Honolulu · ⚠️ Book early — fills up fast!</div>
+      <div class="fc-day">📅 Day 4, 6, or 7</div>
+      <ul class="fc-orders">
+        <li>⭐ Marinated ahi toast</li>
+        <li>⭐ Burmese tea leaf salad</li>
+        <li>⭐ Bo kho pappardelle</li>
+        <li>⭐ Chicken wings</li>
+        <li>⭐ Brussels sprouts</li>
+      </ul>
+    </div>
+
+    <div class="food-card friend-pick">
+      <div class="fc-icon">🍝</div>
+      <div class="fc-badge badge-friends">FRIEND REC</div>
+      <div class="fc-name">Rigo</div>
+      <div class="fc-where">Honolulu</div>
+      <div class="fc-day">📅 Any dinner</div>
+      <ul class="fc-orders">
+        <li>⭐ Crostini</li>
+        <li>⭐ Bolognese</li>
+        <li>Carbonara (good but rich)</li>
+      </ul>
+    </div>
+
+    <div class="food-card">
+      <div class="fc-icon">🌸</div>
+      <div class="fc-badge badge-original">FINE DINING</div>
+      <div class="fc-name">Orchids at Halekulani</div>
+      <div class="fc-where"><a href="https://www.halekulani.com/dining/orchids/" target="_blank">halekulani.com</a> · <a href="https://maps.google.com/?q=Orchids+Restaurant+Halekulani+2199+Kalia+Rd+Honolulu" target="_blank">2199 Kalia Rd</a> · 📞 808-518-2019</div>
+      <div class="fc-day">📅 Day 7 farewell dinner</div>
+      <ul class="fc-orders">
+        <li>🏆 AAA Five Diamond restaurant</li>
+        <li>🌊 Oceanfront terrace</li>
+        <li>Dress smart-casual minimum</li>
+      </ul>
+    </div>
+
+    <div class="food-card friend-pick">
+      <div class="fc-icon">🦀</div>
+      <div class="fc-badge badge-friends">FRIEND REC</div>
+      <div class="fc-name">Da Seafood Cartel</div>
+      <div class="fc-where">Honolulu</div>
+      <div class="fc-day">📅 Date Night option</div>
+      <ul class="fc-orders">
+        <li>⭐ Blue crab dip</li>
+        <li>⭐ Ceviche</li>
+        <li>🦞 Fresh local seafood focus</li>
+      </ul>
+    </div>
+
+    <div class="food-card friend-pick">
+      <div class="fc-icon">🍣</div>
+      <div class="fc-badge badge-friends">FRIEND REC</div>
+      <div class="fc-name">Katsumidori Sushi</div>
+      <div class="fc-where">Honolulu</div>
+      <div class="fc-day">📅 Date Night #2 option</div>
+      <ul class="fc-orders">
+        <li>🐟 Fish flown in from Japan daily</li>
+        <li>⭐ Max Holloway's go-to sushi spot</li>
+        <li>Omakase recommended</li>
+      </ul>
+    </div>
+
+    <div class="food-card friend-pick">
+      <div class="fc-icon">🍱</div>
+      <div class="fc-badge badge-friends">FRIEND REC</div>
+      <div class="fc-name">I-Naba Japanese Restaurant</div>
+      <div class="fc-where">Honolulu</div>
+      <div class="fc-day">📅 Day 7 farewell option</div>
+      <ul class="fc-orders">
+        <li>⭐ Higher-end Japanese</li>
+        <li>🍶 Great sake selection</li>
+        <li>Elegant farewell dinner option</li>
+      </ul>
+    </div>
+
+    <div class="food-card">
+      <div class="fc-icon">🍝</div>
+      <div class="fc-badge badge-original">FAREWELL</div>
+      <div class="fc-name">Taormina Sicilian Cuisine</div>
+      <div class="fc-where"><a href="https://maps.google.com/?q=Taormina+Sicilian+Cuisine+Waikiki+Honolulu" target="_blank">Waikiki · Google Maps →</a></div>
+      <div class="fc-day">📅 Day 7 farewell option</div>
+      <ul class="fc-orders">
+        <li>🍝 Outstanding pasta</li>
+        <li>🦞 Fresh local seafood</li>
+        <li>Relaxed family atmosphere</li>
+      </ul>
+    </div>
+
+    <div class="food-card friend-pick">
+      <div class="fc-icon">🍜</div>
+      <div class="fc-badge badge-friends">FRIEND REC</div>
+      <div class="fc-name">Ramen Bario at STIX Asia</div>
+      <div class="fc-where">Honolulu</div>
+      <div class="fc-day">📅 Day 8 final meal</div>
+      <ul class="fc-orders">
+        <li>⭐ Spicy tonkotsu ramen</li>
+        <li>🍜 Rich, deep broth</li>
+        <li>Great last meal before the airport</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- BRUNCH -->
+  <div class="food-section-head"><h3>🥞 Brunch Spots</h3></div>
+  <div class="food-grid">
+
+    <div class="food-card">
+      <div class="fc-icon">🍳</div>
+      <div class="fc-badge badge-original">TOP PICK</div>
+      <div class="fc-name">Koko Head Café</div>
+      <div class="fc-where"><a href="https://www.kokoheadcafe.com" target="_blank">kokoheadcafe.com</a> · <a href="https://maps.google.com/?q=Koko+Head+Cafe+1120+12th+Ave+Honolulu" target="_blank">1120 12th Ave</a> · <a href="https://www.opentable.com/r/koko-head-cafe-honolulu" target="_blank">OpenTable →</a></div>
+      <div class="fc-day">📅 Day 5 brunch (Gleb &amp; Zoe)</div>
+      <ul class="fc-orders">
+        <li>🥢 Korean-Hawaiian fusion brunch</li>
+        <li>⭐ Kimchi fried rice eggs benedict</li>
+        <li>⏰ Waitlist fills fast — book ahead</li>
+      </ul>
+    </div>
+
+    <div class="food-card friend-pick">
+      <div class="fc-icon">🌮</div>
+      <div class="fc-badge badge-friends">FRIEND REC</div>
+      <div class="fc-name">Paia Fish Market</div>
+      <div class="fc-where">Honolulu location</div>
+      <div class="fc-day">📅 Any lunch</div>
+      <ul class="fc-orders">
+        <li>⭐ Fish tacos</li>
+        <li>⚠️ Heads up: can get messy</li>
+        <li>🐟 Fresh catch daily</li>
+      </ul>
+    </div>
+
+    <div class="food-card friend-pick">
+      <div class="fc-icon">🏚️</div>
+      <div class="fc-badge badge-friends">FRIEND REC</div>
+      <div class="fc-name">Aiea Bowl</div>
+      <div class="fc-where">Aiea, Honolulu</div>
+      <div class="fc-day">📅 Bonus day / backup</div>
+      <ul class="fc-orders">
+        <li>⭐ Iconic local hangout</li>
+        <li>🍲 Non-touristy locals spot</li>
+        <li>Old-school Hawaii vibes</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- HAPPY HOUR & DRINKS -->
+  <div class="food-section-head"><h3>🍹 Happy Hour &amp; Bars</h3></div>
+  <div class="food-grid">
+
+    <div class="food-card happy-hour">
+      <div class="fc-icon">🌅</div>
+      <div class="fc-badge badge-hh">⏰ HAPPY HOUR</div>
+      <div class="fc-name">The Deck</div>
+      <div class="fc-where">Waikiki rooftop bar</div>
+      <div class="fc-day">⏰ Happy hour 2–6 PM daily</div>
+      <ul class="fc-orders">
+        <li>⭐ Great views — friend rec</li>
+        <li>🌅 Diamond Head sightlines</li>
+        <li>Perfect post-nap afternoon spot</li>
+      </ul>
+    </div>
+
+    <div class="food-card happy-hour">
+      <div class="fc-icon">🍺</div>
+      <div class="fc-badge badge-hh">UNIQUE</div>
+      <div class="fc-name">Off The Wall</div>
+      <div class="fc-where">Ala Moana area</div>
+      <div class="fc-day">📅 Days 2, 6 afternoon</div>
+      <ul class="fc-orders">
+        <li>⭐ Pour-your-own beer by the oz</li>
+        <li>🍷 Self-pour wine &amp; cider</li>
+        <li>🥂 Build-your-own mimosa</li>
+      </ul>
+    </div>
+
+    <div class="food-card">
+      <div class="fc-icon">🍹</div>
+      <div class="fc-badge badge-original">ICONIC</div>
+      <div class="fc-name">Mai Tai Bar — Royal Hawaiian</div>
+      <div class="fc-where"><a href="https://maps.google.com/?q=Mai+Tai+Bar+Royal+Hawaiian+Waikiki" target="_blank">Royal Hawaiian Hotel, Waikiki Beach</a></div>
+      <div class="fc-day">📅 Date Night #1</div>
+      <ul class="fc-orders">
+        <li>🍹 Original Mai Tai cocktail</li>
+        <li>🌊 Right on Waikiki Beach</li>
+        <li>Pink Palace of the Pacific vibes</li>
+      </ul>
+    </div>
+
+    <div class="food-card">
+      <div class="fc-icon">🎵</div>
+      <div class="fc-badge badge-original">CLASSIC</div>
+      <div class="fc-name">House Without A Key</div>
+      <div class="fc-where"><a href="https://maps.google.com/?q=House+Without+a+Key+Halekulani+Hotel+Waikiki" target="_blank">Halekulani Hotel, Waikiki</a></div>
+      <div class="fc-day">📅 Date Night #2</div>
+      <ul class="fc-orders">
+        <li>🌺 Live Hawaiian music nightly</li>
+        <li>💃 Hula dancers at sunset</li>
+        <li>🌊 Open-air oceanfront bar</li>
+      </ul>
+    </div>
+
+    <div class="food-card">
+      <div class="fc-icon">🌆</div>
+      <div class="fc-badge badge-original">ROOFTOP</div>
+      <div class="fc-name">SKY Waikiki</div>
+      <div class="fc-where"><a href="https://skywaikiki.com" target="_blank">skywaikiki.com</a> · 19th Floor, Waikiki</div>
+      <div class="fc-day">📅 Date Night #2</div>
+      <ul class="fc-orders">
+        <li>🏔️ Panoramic Diamond Head views</li>
+        <li>🎵 DJ nightly</li>
+        <li>Cocktails with a view</li>
+      </ul>
+    </div>
+
+    <div class="food-card">
+      <div class="fc-icon">🍸</div>
+      <div class="fc-badge badge-original">COCKTAILS</div>
+      <div class="fc-name">Bar Leather Apron</div>
+      <div class="fc-where"><a href="https://maps.google.com/?q=Bar+Leather+Apron+745+Fort+St+Honolulu" target="_blank">745 Fort St Mall, Downtown</a></div>
+      <div class="fc-day">📅 Date Night #1</div>
+      <ul class="fc-orders">
+        <li>⭐ Honolulu's best cocktail bar</li>
+        <li>🧊 Japanese-inspired craft cocktails</li>
+        <li>Intimate &amp; upscale atmosphere</li>
+      </ul>
+    </div>
+
+    <div class="food-card">
+      <div class="fc-icon">💀</div>
+      <div class="fc-badge badge-original">LATE NIGHT</div>
+      <div class="fc-name">Skull &amp; Crown Trading Co.</div>
+      <div class="fc-where"><a href="https://www.skullandcrowntrading.com" target="_blank">Chinatown · Tue–Sat 5–11 PM only</a></div>
+      <div class="fc-day">📅 Date Night #1</div>
+      <ul class="fc-orders">
+        <li>⭐ Wild cocktail menu</li>
+        <li>🌿 Tropical &amp; tiki vibes</li>
+        <li>⚠️ Closed Sun &amp; Mon!</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- THE WILD CARD -->
+  <div class="food-section-head"><h3>😂 The Wild Card</h3></div>
+  <div class="food-grid">
+    <div class="food-card friend-pick" style="max-width:400px;">
+      <div class="fc-icon">🥖</div>
+      <div class="fc-badge badge-friends">HIGHEST CONVICTION REC</div>
+      <div class="fc-name">Jersey Mike's</div>
+      <div class="fc-where">Multiple Honolulu locations</div>
+      <div class="fc-day">📅 Any day (seriously)</div>
+      <ul class="fc-orders">
+        <li>⭐⭐⭐ Turkey + provolone</li>
+        <li>🥬 "Mike's Way" — onion, lettuce, tomato</li>
+        <li>🌶️ Add pickles + jalapeños</li>
+        <li>🏆 Friend's single highest-conviction rec</li>
+      </ul>
+    </div>
+  </div>
+
+</div><!-- end food-wrap -->
+</div><!-- end food tab -->
+
+<!-- ═══════════════ NAPS TAB ═══════════════ -->
+<div class="tab-panel" id="tab-naps">
+<div class="section-title">💤 Misha Nap Master Plan</div>
+<div class="nap-wrap">
+  <div class="nap-table-box">
+    <table>
+      <thead><tr><th>Day</th><th>Date</th><th>Method</th><th>Details &amp; Strategy</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Day 1</strong></td>
+          <td>Sun May 10</td>
+          <td>No nap needed</td>
+          <td>Evening arrival — will be asleep by 10:30 PM. Natural reset to Hawaii time.</td>
+        </tr>
+        <tr>
+          <td><strong>Day 2</strong></td>
+          <td>Mon May 11</td>
+          <td class="nap-badge">🛺 Stroller</td>
+          <td>12:30 PM · Baba &amp; Deda push along Ala Moana waterfront path (flat, shaded) · Gleb walks 12 min to pick up Jeep at 1 PM · Perfect logistics split ✅</td>
+        </tr>
+        <tr>
+          <td><strong>Day 3</strong></td>
+          <td>Tue May 12</td>
+          <td class="nap-badge">🚗 Car (Jeep) ⭐</td>
+          <td>12:30 PM · 1.5 hr highway drive home from North Shore · Full belly + tired from turtles &amp; beach = guaranteed deep sleep · Best nap of the whole trip ⭐</td>
+        </tr>
+        <tr>
+          <td><strong>Day 4</strong></td>
+          <td>Wed May 13</td>
+          <td class="nap-badge">🛺 Stroller</td>
+          <td>12:30 PM · Ko Olina coastal beach path (flat, shaded, beautiful) · ~1.5 hr loop · Grandparents alternate pushing · Gleb &amp; Zoe get solo beach time</td>
+        </tr>
+        <tr>
+          <td><strong>Day 5</strong></td>
+          <td>Thu May 14</td>
+          <td class="nap-badge">🚗 Car → Crib ⭐</td>
+          <td>12:30 PM · Car nap in Jeep from Hanauma Bay → hotel · Misha sleeps the whole ride · Transfer seamlessly to hotel crib at 1 PM · Best handoff of the week · Grandparents receive sleeping baby</td>
+        </tr>
+        <tr>
+          <td><strong>Day 6</strong></td>
+          <td>Fri May 15</td>
+          <td class="nap-badge">🛺 Stroller</td>
+          <td>12:30 PM · Ala Moana beach path → Magic Island loop · Misha asleep in minutes · Grandparents take turns · Gleb &amp; Zoe quiet time on the grass</td>
+        </tr>
+        <tr>
+          <td><strong>Day 7</strong></td>
+          <td>Sat May 16</td>
+          <td class="nap-badge">🚘 Uber</td>
+          <td>12:30 PM · 35-min Kailua → Waikiki Uber · Time the pickup EXACTLY at 12:30 PM after Kalapawai lunch · Misha sleeps the whole ride · Transfer to hotel crib on arrival · No Jeep today so Uber is perfect</td>
+        </tr>
+        <tr>
+          <td><strong>Day 8</strong></td>
+          <td>Sun May 17</td>
+          <td class="nap-badge">🛺 Stroller</td>
+          <td>12:30 PM · Final stroller walk · Waikiki → Ala Wai canal path · Misha's last nap in paradise · Slow, gentle, bittersweet</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
+
+<!-- ═══════════════ CHECKLIST TAB ═══════════════ -->
+<div class="tab-panel" id="tab-checklist">
+<div class="section-title">☑️ Pre-Trip Checklist</div>
+<div class="checklist-wrap">
+<div class="checklist-grid">
+
+  <div class="checklist-card">
+    <h3>🚨 Do Right Now</h3>
+    <div class="cl-item urgent"><div class="cl-box"></div><div class="cl-text">Book farewell dinner (Day 7) — Orchids or Pig &amp; the Lady fills up fast</div></div>
+    <div class="cl-item urgent"><div class="cl-box"></div><div class="cl-text">Book Koko Head Café brunch (Day 5) on <a href="https://www.opentable.com/r/koko-head-cafe-honolulu" target="_blank">OpenTable →</a></div></div>
+    <div class="cl-item urgent"><div class="cl-box"></div><div class="cl-text">Book fine dinner Day 4 — <a href="https://www.opentable.com/r/stripsteak-oahu-honolulu" target="_blank">Stripsteak</a> or Pig &amp; the Lady</div></div>
+    <div class="cl-item urgent"><div class="cl-box"></div><div class="cl-text">⏰ Set Hanauma Bay alarm: May 12 at 9:55 AM PDT → <a href="https://pros.hnl.info/hanauma-bay" target="_blank">pros.hnl.info/hanauma-bay</a></div></div>
+    <div class="cl-item urgent"><div class="cl-box"></div><div class="cl-text">Confirm shuttle with Kevin Tran — Conf #1746120339</div></div>
+    <div class="cl-item urgent"><div class="cl-box"></div><div class="cl-text">Text Jun Lan for Jeep confirmation — 📞 909-979-7672</div></div>
+  </div>
+
+  <div class="checklist-card">
+    <h3>📋 Before You Fly</h3>
+    <div class="cl-item"><div class="cl-box"></div><div class="cl-text">Pre-order DoorDash / Instacart grocery delivery for May 10 arrival night</div></div>
+    <div class="cl-item"><div class="cl-box"></div><div class="cl-text">Download HNL airport map + AC mobile tickets offline</div></div>
+    <div class="cl-item"><div class="cl-box"></div><div class="cl-text">Buy reef-safe sunscreen before trip (required at Hanauma Bay)</div></div>
+    <div class="cl-item"><div class="cl-box"></div><div class="cl-text">Pack snorkel gear or rent at Hanauma Bay gift shop ($12/set)</div></div>
+    <div class="cl-item"><div class="cl-box"></div><div class="cl-text">Pack collapsible beach shade tent for Misha</div></div>
+    <div class="cl-item"><div class="cl-box"></div><div class="cl-text">Install Turo app + confirm Jun's Jeep pickup details</div></div>
+    <div class="cl-item"><div class="cl-box"></div><div class="cl-text">Confirm Marriott HGV check-in — Grand Waikikian Res #985178033</div></div>
+    <div class="cl-item"><div class="cl-box"></div><div class="cl-text">Bring $3 cash for Hanauma Bay parking</div></div>
+  </div>
+
+  <div class="checklist-card">
+    <h3>👶 Misha's Packing List</h3>
+    <div class="cl-item"><div class="cl-box"></div><div class="cl-text">Lightweight travel stroller (perfect for nap walks)</div></div>
+    <div class="cl-item"><div class="cl-box"></div><div class="cl-text">Travel crib / pack-and-play + fitted sheet</div></div>
+    <div class="cl-item"><div class="cl-box"></div><div class="cl-text">Rash guard (UPF 50+) + swim diaper stash</div></div>
+    <div class="cl-item"><div class="cl-box"></div><div class="cl-text">Wide-brim baby sun hat (non-negotiable)</div></div>
+    <div class="cl-item"><div class="cl-box"></div><div class="cl-text">Baby reef-safe SPF 50 sunscreen</div></div>
+    <div class="cl-item"><div class="cl-box"></div><div class="cl-text">White noise machine or app (hotel rooms can be noisy)</div></div>
+    <div class="cl-item"><div class="cl-box"></div><div class="cl-text">Snacks: puffs, pouches, soft crackers for beach days</div></div>
+    <div class="cl-item"><div class="cl-box"></div><div class="cl-text">Car seat for Jeep (Turo — confirm with Jun ahead)</div></div>
+    <div class="cl-item"><div class="cl-box"></div><div class="cl-text">Favourite sleep toy + sound machine backup</div></div>
+  </div>
+
+</div>
+</div>
 </div>
 
 <!-- FOOTER -->
 <div class="footer">
-  <strong>🌺 Vaguine Family Hawaii · May 10–17, 2026 · Grand Waikikian, Honolulu</strong><br><br>
-  Gleb · Zoe · Misha · Andrei · Larissa &nbsp;|&nbsp; Generated by Perplexity AI · April 2026
+  <strong>🌺 Vaguine Family Hawaii · May 10–17, 2026</strong><br>
+  Grand Waikikian · Res #985178033 · Flights A5YSL2 &amp; C898G4<br>
+  Built with aloha ✨ · Gleb, Zoe, Misha, Baba &amp; Deda
 </div>
 
+<!-- JS -->
+<script>
+const tabs = document.querySelectorAll('.tab-btn');
+const panels = document.querySelectorAll('.tab-panel');
+tabs.forEach(btn => {
+  btn.addEventListener('click', () => {
+    tabs.forEach(t => t.classList.remove('active'));
+    panels.forEach(p => { p.classList.remove('active'); p.style.display='none'; });
+    btn.classList.add('active');
+    const target = document.getElementById('tab-' + btn.dataset.tab);
+    if(target){ target.classList.add('active'); target.style.display='block'; }
+  });
+});
+panels.forEach((p,i) => { if(i!==0){ p.style.display='none'; } });
+</script>
 </body>
 </html>
